@@ -1,0 +1,1713 @@
+{
+  "Questionnaire": {
+    "title": "Choisissez votre domaine d'évaluation et niveau",
+    "subtitle": "Sélectionnez une discipline et un niveau de difficulté correspondant à votre expertise",
+    "search": "Rechercher des sections ou domaines...",
+    "loading": "Chargement des sections disponibles...",
+    "noSections": "Aucune section active disponible. Veuillez contacter un administrateur.",
+    "noSectionsSearch": "Aucune section ne correspond à votre recherche.",
+    "noQuestions": "Aucune question disponible pour cette section.",
+    "back": "Retour",
+    "levels": {
+      "beginner": {
+        "title": "Débutant",
+        "badge": "Niveau 1",
+        "description": "Pour ceux qui débutent dans le sujet",
+        "button": "Commencer le test débutant"
+      },
+      "intermediate": {
+        "title": "Intermédiaire",
+        "badge": "Niveau 2",
+        "description": "Pour ceux avec une certaine expérience",
+        "button": "Commencer le test intermédiaire"
+      },
+      "advanced": {
+        "title": "Avancé",
+        "badge": "Niveau 3",
+        "description": "Pour les experts et professionnels",
+        "button": "Commencer le test avancé"
+      }
+    },
+    "metrics": {
+      "questions": "Questions",
+      "duration": "minutes"
+    },
+    "toasts": {
+      "success": "Section sélectionnée !",
+      "error": "Échec de la sélection de section. Veuillez réessayer."
+    }
+  },
+  "Schedule": {
+    "title": "Planifiez votre évaluation",
+    "selectedAssessment": "Évaluation {section}",
+    "selectTime": "Sélectionnez quand vous souhaitez passer votre évaluation",
+    "loading": "Chargement...",
+    "backButton": "Retour",
+    "fields": {
+      "selectedAssessment": "Évaluation sélectionnée",
+      "selectTime": "Sélectionner l'heure",
+      "selectDate": "Sélectionner la date",
+      "selectOption": "Sélectionner une option"
+    },
+    "placeholders": {
+      "selectTime": "Sélectionner l'heure"
+    },
+    "timeOptions": {
+      "now": "Commencer maintenant"
+    },
+    "difficultyLabels": {
+      "beginner": "Débutant (Niveau 1)",
+      "intermediate": "Intermédiaire (Niveau 2)",
+      "advanced": "Avancé (Niveau 3)"
+    },
+    "startNow": {
+      "title": "Commencer maintenant",
+      "description": "Vous commencerez l'évaluation immédiatement."
+    },
+    "scheduleLater": {
+      "title": "Planifié pour plus tard"
+    },
+    "buttons": {
+      "processing": "Traitement en cours...",
+      "startNow": "Commencer l'évaluation maintenant",
+      "schedule": "Planifier et commencer l'évaluation"
+    },
+    "errors": {
+      "loginRequired": "Veuillez vous connecter pour planifier une évaluation",
+      "authError": "Erreur d'authentification. Veuillez vous reconnecter.",
+      "selectSubject": "Veuillez d'abord sélectionner un sujet d'évaluation",
+      "terminated": "Votre évaluation précédente a été interrompue en raison d'une violation. Vous ne pouvez pas repasser cette évaluation.",
+      "scheduleFailed": "Échec de la planification du test : {error}",
+      "startFailed": "Échec du démarrage de l'évaluation. Veuillez réessayer."
+    },
+    "success": {
+      "scheduled": "Évaluation planifiée avec succès !"
+    }
+  },
+  "Navigation": {
+    "routes": {
+      "home": "Accueil",
+      "dashboard": "Tableau de bord",
+      "test": "Tableau de bord",
+      "profile": "Profil",
+      "viewJobs": "Voir les offres",
+      "candidates": "Candidats",
+      "jobs": "Offres d'emploi",
+      "QuizQuetions": "Questions de quiz",
+      "course": "https://google.com",
+      "examiners": "Examinateurs",
+      "evaluation_check": "Vérification des évaluations",
+      "profile_recruiter": "Profil recruteur"
+    },
+    "language": {
+      "switch": "Passer à l'anglais",
+      "current": "FR"
+    },
+    "roles": {
+      "recruiter": "Recruteur",
+      "candidate": "Candidat",
+      "admin": "Administrateur",
+      "examiner": "Examinateur",
+      "guest": "Utilisateur invité"
+    },
+    "user": {
+      "noEmail": "Pas d'email"
+    }
+  },
+  "ViewJobs": {
+    "pageTitle": "Postes disponibles",
+    "pageSubtitle": "Trouvez votre prochaine opportunité de carrière",
+    "loading": {
+      "title": "Chargement des résultats",
+      "subtitle": "Veuillez patienter pendant que nous traitons votre demande"
+    },
+    "noJobs": {
+      "title": "Aucun emploi disponible",
+      "description": "Il n'y a actuellement aucune offre d'emploi disponible. Veuillez vérifier ultérieurement ou mettre à jour votre profil pour améliorer la correspondance des emplois.",
+      "refreshButton": "Actualiser la page"
+    },
+    "noResults": {
+      "title": "Aucun résultat trouvé",
+      "description": "Essayez d'ajuster vos critères de recherche ou vos filtres"
+    },
+    "profileBanner": {
+      "title": "Complétez votre profil !",
+      "description": "Veuillez mettre à jour :",
+      "andText": " et ",
+      "commaText": ", ",
+      "subtitle": "Compléter votre profil vous aidera à trouver des opportunités d'emploi pertinentes.",
+      "updateButton": "Mettre à jour le profil"
+    },
+    "jobCard": {
+      "capacityNeeded": "Capacité nécessaire :",
+      "today": "Aujourd'hui",
+      "yesterday": "Hier",
+      "daysAgo": "il y a {days} jours",
+      "monthsAgo": "il y a {months} mois | il y a {months} mois",
+      "yearsAgo": "il y a {years} an | il y a {years} ans",
+      "applied": "Postulé",
+      "viewDetailsButton": "Voir les détails"
+    },
+    "filter": {
+      "searchPlaceholder": "Rechercher des emplois, entreprises ou mots-clés",
+      "filtersButton": "Filtres",
+      "closePanel": "Fermer le panneau",
+      "title": "Filtrer les emplois",
+      "applicationStatus": "Statut de candidature",
+      "jobType": "Type d'emploi",
+      "experienceLevel": "Niveau d'expérience",
+      "categories": "Catégories",
+      "skills": "Compétences",
+      "salaryRange": "Fourchette de salaire",
+      "minPlaceholder": "Min",
+      "maxPlaceholder": "Max",
+      "to": "à",
+      "showAvailableOnly": "Afficher uniquement les emplois disponibles",
+      "applyFilters": "Appliquer les filtres",
+      "resetFilters": "Réinitialiser",
+      "options": {
+        "allTypes": "Tous les types",
+        "fullTime": "Temps plein",
+        "partTime": "Temps partiel",
+        "contract": "Contrat",
+        "internship": "Stage",
+        "allLevels": "Tous les niveaux",
+        "senior": "Senior",
+        "midLevel": "Niveau intermédiaire",
+        "junior": "Junior",
+        "entry": "Débutant",
+        "allJobs": "Tous les emplois",
+        "appliedJobs": "Emplois postulés",
+        "notAppliedJobs": "Emplois non postulés"
+      }
+    }
+  },
+  "JobDetails": {
+    "loading": "Chargement...",
+    "loadingDescription": "Veuillez patienter pendant que nous traitons votre demande",
+    "notFound": {
+      "title": "Emploi non trouvé",
+      "description": "L'offre d'emploi que vous recherchez n'existe pas ou a été supprimée."
+    },
+    "backToJobs": "Retour aux emplois",
+    "remote": "Télétravail",
+    "jobInfo": {
+      "type": "Type",
+      "location": "Lieu",
+      "salary": "Salaire"
+    },
+    "application": {
+      "alreadyApplied": "Déjà postulé",
+      "cancelApplication": "Annuler la candidature",
+      "applying": "Candidature en cours...",
+      "applyNow": "Postuler maintenant"
+    },
+    "employer": {
+      "viewCandidates": "Voir les candidats",
+      "editJob": "Modifier les détails de l'emploi"
+    },
+    "sections": {
+      "companyDescription": "Description de l'entreprise",
+      "responsibilities": "Responsabilités",
+      "whoWeAre": "Qui sommes-nous",
+      "requirements": "Exigences"
+    },
+    "sidebar": {
+      "applicationStatus": "Statut de la candidature",
+      "applicationReviewed": "Votre candidature est en cours d'examen",
+      "reviewMessage": "Merci d'avoir postulé ! L'employeur examinera votre candidature et vous contactera s'il est intéressé.",
+      "of": "sur",
+      "positionsFilled": "postes pourvus",
+      "closed": "Fermé",
+      "jobDetails": "Détails de l'emploi",
+      "posted": "Publié le",
+      "employmentType": "Type d'emploi",
+      "location": "Lieu",
+      "categories": "Catégories",
+      "requiredSkills": "Compétences requises"
+    },
+    "success": {
+      "applicationSubmitted": "Candidature soumise avec succès !",
+      "applicationCancelled": "Candidature annulée avec succès !"
+    },
+    "errors": {
+      "loginRequired": "Veuillez vous connecter pour postuler",
+      "cancelFailed": "Échec de l'annulation de la candidature",
+      "candidatesLoadFailed": "Échec du chargement des candidats"
+    }
+  },
+  "Profile": {
+    "Candidate": {
+      "title": "Modifier le profil",
+      "subtitle": "Vos informations de profil",
+      "editButton": "Mettre à jour",
+      "loading": "Chargement des données du profil...",
+      "notProvided": "Non fourni",
+      "noLanguages": "Aucune langue listée",
+      "noSkills": "Aucune compétence listée",
+      "noInformation": "Aucune information fournie",
+      "profileLabel": "Profil",
+      "fields": {
+        "firstName": "Prénom",
+        "lastName": "Nom",
+        "phoneNumber": "Numéro de téléphone",
+        "dateOfBirth": "Date de naissance",
+        "countryOfBirth": "Pays de naissance",
+        "gender": "Genre",
+        "languages": "Langues",
+        "languagesDescription": "Sélectionnez toutes les langues que vous maîtrisez",
+        "about": "À propos de vous",
+        "aboutPlaceholder": "Écrivez une brève description de vous-même",
+        "instagram": "Instagram",
+        "twitter": "Twitter",
+        "website": "Site web",
+        "currentJob": "Emploi actuel",
+        "currentJobPlaceholder": "Entrez votre poste actuel",
+        "yearsOfExperience": "Années d'expérience",
+        "yearsOfExperiencePlaceholder": "Entrez vos années d'expérience",
+        "skills": "Compétences"
+      },
+      "qualifications": {
+        "title": "Détails des qualifications",
+        "advancedLevel": {
+          "title": "Résultats du niveau avancé",
+          "grade": "Note"
+        },
+        "hnd": {
+          "title": "Diplôme national supérieur",
+          "field": "Domaine d'étude",
+          "specialization": "Spécialisation",
+          "grade": "Note finale"
+        },
+        "bachelors": {
+          "title": "Licence",
+          "degreeTitle": "Intitulé du diplôme",
+          "institution": "Institution",
+          "grade": "Note finale/Moyenne"
+        },
+        "masters": {
+          "title": "Master",
+          "degreeTitle": "Intitulé du diplôme",
+          "institution": "Institution",
+          "thesis": "Domaine de recherche/Thèse",
+          "grade": "Note finale/Moyenne"
+        },
+        "phd": {
+          "title": "Doctorat",
+          "field": "Domaine de recherche",
+          "institution": "Institution",
+          "thesis": "Titre de la thèse",
+          "summary": "Résumé de la recherche"
+        }
+      },
+      "resume": {
+        "title": "CV",
+        "viewButton": "Voir le CV",
+        "uploadText": "Télécharger un fichier",
+        "dragDropText": "ou glisser-déposer",
+        "fileTypeText": "PDF, DOC jusqu'à 10 Mo",
+        "noFileSelected": "Aucun fichier choisi",
+        "selectedFile": "Fichier sélectionné :"
+      },
+      "form": {
+        "addSubject": "Ajouter une matière",
+        "removeSubject": "Supprimer",
+        "selectQualification": "Sélectionner une qualification",
+        "selectField": "Sélectionner un domaine",
+        "selectGrade": "Sélectionner une note",
+        "selectLanguages": "Sélectionner des langues",
+        "selectCountry": "Sélectionner un pays",
+        "selectGender": "Sélectionner un genre",
+        "skillsPlaceholder": "Tapez une compétence et appuyez sur Entrée",
+        "updating": "Mise à jour...",
+        "errorTitle": "Erreur lors de la mise à jour du profil"
+      }
+    }
+  },
+  "Dashboard": {
+    "title": "Tableau de bord d'évaluation",
+    "loading": "Chargement...",
+    "performanceChart": {
+      "title": "Performance d'évaluation",
+      "recentTitle": "Performance d'évaluation récente",
+      "summary": "Résumé des performances",
+      "noData": "Aucune donnée d'évaluation disponible",
+      "footnote": "Chaque évaluation teste différentes compétences selon la discipline.",
+      "footnoteDetail": "Le graphique montre vos performances dans chaque domaine testé."
+    },
+    "assessmentHistory": {
+      "title": "Historique des évaluations",
+      "newAssessment": "Passer une nouvelle évaluation",
+      "noHistory": "Aucun historique d'évaluation trouvé",
+      "noHistorySubtext": "Passez votre première évaluation pour voir vos performances"
+    },
+    "scheduledTests": {
+      "noTests": "Aucun test planifié trouvé",
+      "noTestsSubtext": "Planifiez un test pour le voir apparaître ici",
+      "scheduleButton": "Planifier un test"
+    },
+    "tabs": {
+      "scheduled": "Évaluation(s) à venir",
+      "completed": "Évaluation(s) terminée(s)"
+    },
+    "table": {
+      "date": "Date",
+      "discipline": "Discipline",
+      "score": "Score",
+      "view": "Voir",
+      "scheduledDate": "Date planifiée",
+      "time": "Heure",
+      "latest": "Plus récent",
+      "pending": "En attente",
+      "pass": "Réussite",
+      "rejected": "Rejeté",
+      "pendingReview": "En attente de révision",
+      "fail": "Échec",
+      "terminated": "Interrompu"
+    },
+    "pagination": {
+      "previous": "Précédent",
+      "next": "Suivant",
+      "showing": "Affichage de",
+      "to": "à",
+      "of": "sur",
+      "results": "résultats"
+    },
+    "testInfo": {
+      "title": "Test d'évaluation",
+      "subtitle": "Complétez cette évaluation pour débloquer des opportunités d'emploi",
+      "duration": {
+        "title": "Durée",
+        "text": "Environ 30 minutes pour compléter"
+      },
+      "format": {
+        "title": "Format du test",
+        "items": [
+          "Questions à choix multiples",
+          "Évaluation technique",
+          "Évaluation de personnalité"
+        ]
+      },
+      "notes": {
+        "title": "Notes importantes",
+        "items": [
+          "Assurez-vous d'avoir une connexion internet stable",
+          "Complétez en une seule session",
+          "Gardez votre caméra prête pour la vérification"
+        ]
+      },
+      "startButton": "Commencer l'évaluation",
+      "loadingButton": "Chargement...",
+      "termsNote": "En commençant l'évaluation, vous acceptez nos conditions générales de test"
+    },
+    "metrics": {
+      "testDate": "Date du test",
+      "score": "Score",
+      "questionsAttempted": "Questions tentées",
+      "difficultyLevel": "Niveau de difficulté",
+      "pastDue": "En retard",
+      "secondsLeft": "{{seconds}} secondes restantes",
+      "minutesLeft": "{{minutes}} minutes restantes",
+      "hoursLeft": "{{hours}} heures restantes",
+      "daysLeft": "{{days}} jours restants",
+      "questionSet": "Section"
+    }
+  },
+  "AdminDashboard": {
+    "Dashboard": {
+      "loading": "Chargement des données",
+      "loadingDescription": "Veuillez patienter pendant que nous traitons votre demande",
+      "greeting": {
+        "morning": "Bonjour",
+        "afternoon": "Bon après-midi",
+        "evening": "Bonsoir"
+      },
+      "admin": "Administrateur",
+      "statisticsFrom": "Statistiques depuis",
+      "now": "Maintenant",
+      "statisticsOverview": "Aperçu des statistiques",
+      "topRecruiters": "Meilleurs recruteurs",
+      "topRoles": "Meilleurs rôles",
+      "stats": {
+        "newRecruiters": "Nouveaux recruteurs des 7 derniers jours",
+        "newCandidates": "Nouveaux candidats des 7 derniers jours",
+        "openPositions": "Postes ouverts des 7 derniers jours"
+      },
+      "chart": {
+        "newRecruiters": "Nouveaux recruteurs",
+        "newCandidates": "Nouveaux candidats",
+        "openPositions": "Postes ouverts",
+        "items": "éléments",
+        "last7Days": "Aperçu des 7 derniers jours",
+        "last30Days": "Aperçu des 30 derniers jours",
+        "last90Days": "Aperçu des 90 derniers jours",
+        "option7Days": "7 derniers jours",
+        "option30Days": "30 derniers jours",
+        "option90Days": "90 derniers jours"
+      },
+      "Tables": {
+        "roleTable": {
+          "profile": "Profil",
+          "openPositions": "Postes ouverts",
+          "noRecruiters": "Aucun recruteur disponible"
+        },
+        "recruiterTable": {
+          "role": "Rôle",
+          "openPositions": "Postes ouverts",
+          "positions": "postes",
+          "errorLoading": "Erreur lors du chargement des rôles",
+          "noRoles": "Aucun rôle disponible"
+        }
+      }
+    }
+  },
+  "Quiz": {
+    "disciplines": "Disciplines",
+    "allDisciplines": "Toutes les disciplines",
+    "searchPlaceholder": "Rechercher ici",
+    "filters": {
+      "allAreas": "Tous les domaines",
+      "allSubcategories": "Toutes les sous-catégories",
+      "filterByArea": "Filtrer par domaine"
+    },
+    "confirmations": {
+      "deleteSection": "Êtes-vous sûr de vouloir supprimer cette section ?"
+    },
+    "errors": {
+      "fetchAreaOptions": "Erreur lors de la récupération des options de domaine",
+      "fetchSubcategoryOptions": "Erreur lors de la récupération des options de sous-catégorie",
+      "noSections": "Aucune section trouvée",
+      "fetchData": "Erreur lors de la récupération des données",
+      "deleteSection": "Échec de la suppression de la section"
+    },
+    "addSection": {
+      "buttonTitle": "Ajouter une nouvelle section",
+      "title": "Ajouter une nouvelle section",
+      "sectionNameLabel": "Nom de la section",
+      "duplicateNameError": "Une section avec ce nom existe déjà",
+      "sectionNamePlaceholder": "Entrez le nom de la section",
+      "addButton": "Ajouter une section"
+    },
+    "common": {
+      "cancel": "Annuler",
+      "save": "Enregistrer",
+      "saving": "Enregistrement...",
+      "adding": "Ajout...",
+      "add": "Ajouter",
+      "edit": "Modifier",
+      "delete": "Supprimer",
+      "loading": "Chargement..."
+    },
+    "sectionMenu": {
+      "placeholderQuestion": "Combien font 1 + 2 ?",
+      "placeholderAnswer": "3",
+      "placeholderAnswer2": "4",
+      "placeholderAnswer3": "8",
+      "placeholderAnswer4": "9",
+      "correctAnswer": "B",
+      "addSubcategory": "Ajouter une sous-catégorie",
+      "addSubcategoryTitle": "Ajouter une sous-catégorie",
+      "subcategoryNameLabel": "Sous-catégorie",
+      "newSubcategoryPlaceholder": "",
+      "sectionUpdated": "{{name}} mis à jour",
+      "subcategoryUpdated": "Sous-catégorie mise à jour",
+      "subcategoryAdded": "Sous-catégorie ajoutée avec succès",
+      "subcategoryDeleted": "Sous-catégorie supprimée avec succès",
+      "confirmDeleteSubcategory": "Êtes-vous sûr de vouloir supprimer cette sous-catégorie",
+      "inactive": "inactive",
+      "noSubcategories": "Aucune sous-catégorie",
+      "enterSectionName": "Entrez le nom de la section",
+      "setActive": "Activer",
+      "setInactive": "Désactiver",
+      "tooltips": {
+        "active": "Active (cliquez pour désactiver)",
+        "inactive": "Inactive (cliquez pour activer)"
+      },
+      "errors": {
+        "emptyName": "Le nom de la section ne peut pas être vide",
+        "nameExists": "Une section avec ce nom existe déjà",
+        "updateFailed": "Échec de la mise à jour de la section",
+        "loadSubcategories": "Échec du chargement des sous-catégories",
+        "updateStatusFailed": "Échec de la mise à jour du statut de {{name}}",
+        "updateSubcategoryFailed": "Échec de la mise à jour de la sous-catégorie",
+        "deleteSubcategoryFailed": "Échec de la suppression de la sous-catégorie"
+      },
+      "notifications": {
+        "nowActive": "La section est maintenant active",
+        "nowInactive": "La section est maintenant inactive"
+      }
+    },
+    "NewQuestion": {
+      "title": "Nouvelle question",
+      "area": "Domaine",
+      "add": "Ajouter",
+      "discipline": "Discipline",
+      "duration": "Durée",
+      "subcategory": "Sous-catégorie",
+      "question": "Question",
+      "responses": "Réponses",
+      "correctAnswer": "Réponse correcte",
+      "saveQuestion": "Enregistrer la question",
+      "saving": "Enregistrement...",
+      "createNewSubcategory": "Créer une nouvelle sous-catégorie",
+      "selectDisciplineFirst": "Sélectionnez d'abord une discipline pour voir ou créer des sous-catégories",
+      "placeholders": {
+        "area": "Entrez le domaine (ex. AP, AR)",
+        "discipline": "Sélectionner une discipline",
+        "subcategory": "Sélectionner ou créer une sous-catégorie",
+        "newSubcategory": "Entrez une nouvelle sous-catégorie (ex. Finance_001_Débutants)",
+        "question": "Entrez votre question ici...",
+        "answer": "Réponse"
+      },
+      "timeUnits": {
+        "min": "min",
+        "hrs": "h",
+        "secs": "sec"
+      },
+      "errors": {
+        "fillAllFields": "Veuillez remplir tous les champs obligatoires",
+        "noDisciplines": "Aucune discipline trouvée",
+        "fetchingData": "Erreur lors de la récupération des données"
+      },
+      "toast": {
+        "saving": "Enregistrement de la question...",
+        "saveSuccess": "Question enregistrée avec succès !",
+        "saveError": "Erreur lors de l'enregistrement de la question : {{error}}",
+        "error": "Erreur : {{error}}"
+      }
+    },
+    "QuizTable": {
+      "columns": {
+        "no": "N°",
+        "questions": "Questions",
+        "area": "Domaine",
+        "discipline": "Discipline",
+        "subcategory": "Sous-catégorie",
+        "responseTime": "Temps de réponse",
+        "answer": "Réponse",
+        "actions": "Actions"
+      },
+      "filters": {
+        "discipline": "Discipline",
+        "subcategory": "Sous-catégorie",
+        "area": "Domaine",
+        "search": "Recherche"
+      },
+      "actions": {
+        "editQuestion": "Modifier la question",
+        "deleteQuestion": "Supprimer la question"
+      },
+      "activeFilters": "Filtres actifs",
+      "clearAllFilters": "Effacer tous les filtres",
+      "noQuestionsMatch": "Aucune question ne correspond à vos filtres",
+      "tryAdjustingFilters": "Essayez d'ajuster vos critères de recherche ou de filtrage"
+    }
+  },
+  "Job": {
+    "myJobListings": "Mes offres d'emploi",
+    "allJobListings": "Toutes les offres d'emploi"
+  },
+  "JobPosting": {
+    "title": "Créer une nouvelle offre d'emploi",
+    "selectCompany": "Sélectionner une entreprise",
+    "categories": {
+      "software": "Développement logiciel",
+      "marketing": "Marketing",
+      "finance": "Finance",
+      "sales": "Ventes",
+      "design": "Design"
+    },
+    "skills": {
+      "marketing": "Marketing",
+      "sales": "Ventes"
+    },
+    "jobTypes": {
+      "fullTime": "Temps plein",
+      "partTime": "Temps partiel",
+      "contract": "Contrat",
+      "freelance": "Freelance"
+    },
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "gender": {
+      "male": "Homme",
+      "female": "Femme",
+      "other": "Autre"
+    },
+    "qualifications": {
+      "advancedLevel": "Niveau avancé",
+      "higherNationalDiploma": "Diplôme national supérieur",
+      "bachelorDegree": "Licence",
+      "masterDegree": "Master",
+      "phd": "Doctorat"
+    },
+    "createOption": "Ajouter \"{{value}}\"",
+    "errors": {
+      "selectCompany": "Veuillez sélectionner une entreprise",
+      "selectCountry": "Veuillez sélectionner un pays",
+      "failedToCreate": "Échec de la création de l'offre d'emploi",
+      "failedToLoadCountries": "Échec du chargement des pays",
+      "checkingPermissions": "Erreur lors de la vérification des autorisations de l'utilisateur",
+      "failedToLoadCompanyProfiles": "Échec du chargement des profils d'entreprise",
+      "loadingData": "Erreur lors du chargement des données",
+      "profileNotFound": "Profil non trouvé",
+      "fetchingProfile": "Erreur lors de la récupération des informations du profil, mettez à jour les informations du profil et réessayez"
+    },
+    "success": {
+      "jobCreated": "Offre d'emploi créée avec succès"
+    },
+    "warnings": {
+      "incompleteProfile": "Profil d'entreprise incomplet",
+      "completeProfileFirst": "Veuillez compléter votre profil d'entreprise avant de créer une offre d'emploi.",
+      "requiredFields": "Champs obligatoires"
+    },
+    "fields": {
+      "companyName": "Nom de l'entreprise",
+      "companyDescription": "Description de l'entreprise",
+      "roleTitle": "Titre du poste",
+      "jobType": "Type d'emploi",
+      "endDate": "Date de fin",
+      "status": "Statut",
+      "categories": "Catégories",
+      "requiredSkills": "Compétences requises",
+      "currentPositions": "Postes actuellement pourvus (par défaut 0)",
+      "positionsNeeded": "Postes nécessaires",
+      "location": "Lieu",
+      "salaryRange": "Fourchette de salaire",
+      "responsibilities": "Responsabilités",
+      "whoYouAre": "Qui vous êtes",
+      "additionalRequirements": "Exigences supplémentaires"
+    },
+    "placeholders": {
+      "selectCompany": "Sélectionnez une entreprise...",
+      "roleTitle": "ex. Ingénieur logiciel senior",
+      "selectOrCreateCategories": "Sélectionnez ou créez des catégories...",
+      "selectOrCreateSkills": "Sélectionnez ou créez des compétences...",
+      "loadingCountries": "Chargement des pays...",
+      "selectCountry": "Sélectionnez un pays",
+      "cityLocation": "Ville ou lieu spécifique",
+      "minimumSalary": "Salaire minimum",
+      "maximumSalary": "Salaire maximum",
+      "anyGender": "Tous genres",
+      "selectCountryOfBirth": "Sélectionnez le pays de naissance",
+      "selectOrCreateRequiredSkills": "Sélectionnez ou créez des compétences requises",
+      "selectRequiredQualifications": "Sélectionnez les qualifications requises"
+    },
+    "sections": {
+      "jobDetails": "Détails de l'emploi",
+      "candidateRequirements": "Exigences pour les candidats"
+    },
+    "filters": {
+      "genderPreference": "Préférence de genre",
+      "countryOfBirth": "Pays de naissance",
+      "requiredSkills": "Compétences requises",
+      "minimumYearsExperience": "Années d'expérience minimum",
+      "requiredQualifications": "Qualifications requises"
+    },
+    "actions": {
+      "updateProfile": "Mettre à jour le profil",
+      "cancel": "Annuler",
+      "creating": "Création en cours...",
+      "createJobPosting": "Créer une offre d'emploi",
+      "showFilters": "Afficher les filtres",
+      "hideFilters": "Masquer les filtres",
+      "newJobPosting": "Nouvelle offre d'emploi"
+    },
+    "loading": {
+      "info": "Chargement des informations",
+      "pleaseWait": "Veuillez patienter pendant que nous traitons votre demande"
+    },
+    "positionsSummary": "{{filled}} candidat(s), {{needed}} poste(s) nécessaire(s)",
+    "selectedCountry": "Pays sélectionné : {{country}}",
+    "selectedCity": ", Ville : {{city}}",
+    "pleaseSelectCountry": "Veuillez sélectionner un pays"
+  },
+  "JobTable": {
+    "columns": {
+      "role": "Poste",
+      "datePosted": "Date de publication",
+      "dueDate": "Date d'échéance",
+      "type": "Type",
+      "status": "Statut",
+      "applications": "Candidatures",
+      "positionsFilled": "Postes pourvus",
+      "positionsNeeded": "Postes nécessaires",
+      "actions": "Actions"
+    },
+    "applications": {
+      "total": "Total",
+      "pending": "En attente",
+      "accepted": "Acceptées",
+      "rejected": "Rejetées"
+    },
+    "actions": {
+      "view": "Voir"
+    },
+    "errors": {
+      "loadingJobs": "Erreur lors du chargement des emplois"
+    },
+    "items": {
+      "jobPosting": "offre d'emploi"
+    }
+  },
+  "CandidateTable": {
+    "columns": {
+      "candidate": "Candidat",
+      "scoreOverall": "Score global",
+      "location": "Lieu",
+      "discipline": "Discipline/Section",
+      "experience": "Expérience",
+      "highestQualification": "Plus haute qualification",
+      "registrationDate": "Date d'inscription",
+      "actions": "Actions"
+    },
+    "years": "Années",
+    "actions": {
+      "view": "Voir"
+    },
+    "items": {
+      "candidateData": "données du candidat"
+    }
+  },
+  "CandidateFilter": {
+    "searchPlaceholder": "Rechercher des candidats, compétences ou lieux",
+    "filters": "Filtres",
+    "filterCandidates": "Filtrer les candidats",
+    "closePanel": "Fermer le panneau",
+    "country": "Pays",
+    "discipline": "Discipline/Section",
+    "selectDiscipline": "Sélectionnez une discipline",
+    "disciplines": {
+      "all": "Toutes les disciplines"
+    },
+    "countryPlaceholder": "Filtrer par pays...",
+    "qualification": "Qualification",
+    "minimumExperience": "Expérience minimum (années)",
+    "minimumYears": "Années minimum...",
+    "gender": "Genre",
+    "language": "Langue",
+    "scoreRange": "Plage de score",
+    "min": "Min",
+    "max": "Max",
+    "to": "à",
+    "showOnlyHighScoring": "Afficher uniquement les candidats à haut score",
+    "applyFilters": "Appliquer les filtres",
+    "reset": "Réinitialiser",
+    "qualifications": {
+      "all": "Toutes les qualifications",
+      "advancedLevel": "Niveau avancé",
+      "higherNationalDiploma": "Diplôme national supérieur",
+      "bachelorsDegree": "Licence",
+      "mastersDegree": "Master",
+      "phdDegree": "Doctorat"
+    },
+    "genders": {
+      "all": "Tous les genres",
+      "male": "Homme",
+      "female": "Femme"
+    },
+    "languages": {
+      "all": "Toutes les langues",
+      "english": "Anglais",
+      "french": "Français"
+    }
+  },
+  "JobFilter": {
+    "searchPlaceholder": "Rechercher des emplois, entreprises ou compétences",
+    "filters": "Filtres",
+    "filterJobs": "Filtrer les emplois",
+    "closePanel": "Fermer le panneau",
+    "jobType": "Type d'emploi",
+    "status": "Statut",
+    "categoriesLabel": "Catégories",
+    "salaryRange": "Fourchette de salaire",
+    "min": "Min",
+    "max": "Max",
+    "to": "à",
+    "minimumPositionsNeeded": "Postes minimum nécessaires",
+    "minimumCapacity": "Capacité minimum",
+    "applyFilters": "Appliquer les filtres",
+    "reset": "Réinitialiser",
+    "jobTypes": {
+      "all": "Tous les types",
+      "fullTime": "Temps plein",
+      "partTime": "Temps partiel",
+      "contract": "Contrat",
+      "freelance": "Freelance"
+    },
+    "statuses": {
+      "all": "Tous les statuts",
+      "active": "Actif",
+      "live": "En ligne",
+      "closed": "Fermé"
+    },
+    "categories": {
+      "technology": "Technologie",
+      "marketing": "Marketing",
+      "sales": "Ventes",
+      "ai": "IA",
+      "machineLearning": "Apprentissage automatique",
+      "digital": "Numérique",
+      "banking": "Bancaire",
+      "environmental": "Environnemental"
+    }
+  },
+  "Logout": {
+    "confirmLogout": "Confirmer la déconnexion",
+    "confirmMessage": "Êtes-vous sûr de vouloir vous déconnecter ? Vous devrez vous reconnecter pour accéder à votre compte.",
+    "cancel": "Annuler",
+    "logout": "Déconnexion",
+    "loggingOut": "Déconnexion en cours..."
+  },
+  "DeleteModal": {
+    "deleteTitle": "Supprimer {{itemName}}",
+    "confirmMessage": "Êtes-vous sûr de vouloir supprimer cet(te) {{itemName}} ? Cette action ne peut pas être annulée.",
+    "successMessage": "{{itemName}} supprimé avec succès",
+    "errorMessage": "Échec de la suppression de {{itemName}}",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "deleting": "Suppression en cours..."
+  },
+  "DeleteModalJob": {
+    "deleteTitle": "Supprimer {{itemName}}",
+    "confirmMessage": "Êtes-vous sûr de vouloir supprimer cet(te) {{itemName}} ? Cette action ne peut pas être annulée.",
+    "successMessage": "{{itemName}} supprimé avec succès",
+    "errorMessage": "Échec de la suppression de {{itemName}}",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "deleting": "Suppression en cours..."
+  },
+  "Auth": {
+    "logoAlt": "Logo de l'entreprise",
+    "signInTitle": "Connectez-vous à votre compte",
+    "emailLabel": "Adresse e-mail",
+    "emailPlaceholder": "Entrez votre e-mail",
+    "passwordLabel": "Mot de passe",
+    "passwordPlaceholder": "Entrez votre mot de passe",
+    "forgotPassword": "Mot de passe oublié ?",
+    "showPassword": "Afficher le mot de passe",
+    "hidePassword": "Masquer le mot de passe",
+    "signIn": "Se connecter",
+    "loading": "Chargement....",
+    "error": "{{error}}",
+    "notMember": "Pas encore membre ?",
+    "signUp": "S'inscrire",
+    "noAccount": "Vous n'avez pas de compte ?",
+    "registerAsCandidate": "S'inscrire en tant que Candidat",
+    "areRecruiter": "Êtes-vous un recruteur ?",
+    "registerAsRecruiter": "S'inscrire en tant que Recruteur",
+    "welcomeBack": "Bon retour !",
+    "welcomeSubtitle": "Veuillez saisir vos identifiants pour accéder à votre compte.",
+    "logoAlt": "Logo SkillNet",
+    "welcomeToSkillNet": "Bienvenue sur SkillNet",
+    "welcomeDescription": "Découvrez l'avenir du recrutement avec la vérification faciale avancée, la surveillance automatisée et l'évaluation intelligente des candidats.",
+    "featureRealTimeRecognition": "Reconnaissance Faciale en Temps Réel",
+    "featureAutomatedProctoring": "Système de Surveillance Automatisée",
+    "featureIntelligentAssessment": "Moteur d'Évaluation Intelligente",
+    "featureAnalyticsDashboard": "Tableau de Bord d'Analyses Complet",
+    "switchToDarkMode": "Passer au mode sombre",
+    "switchToLightMode": "Passer au mode clair"
+  },
+  "Register": {
+    "logoAlt": "Logo de l'entreprise",
+    "createAccount": "Créer un nouveau compte",
+    "emailLabel": "Adresse e-mail",
+    "emailPlaceholder": "Entrez votre e-mail",
+    "passwordLabel": "Mot de passe",
+    "passwordPlaceholder": "Créez un mot de passe",
+    "confirmPasswordLabel": "Confirmer le mot de passe",
+    "confirmPasswordPlaceholder": "Confirmez votre mot de passe",
+    "accountTypeLabel": "Sélectionnez le type de compte",
+    "candidate": "Candidat",
+    "recruiter": "Recruteur",
+    "showPassword": "Afficher le mot de passe",
+    "hidePassword": "Masquer le mot de passe",
+    "signUp": "S'inscrire",
+    "loading": "Chargement....",
+    "error": "{{error}}",
+    "passwordMismatch": "Les mots de passe ne correspondent pas !",
+    "alreadyMember": "Déjà membre ?",
+    "signIn": "Se connecter",
+    "recruiterSubtitle": "Rejoignez SkillNet en tant que recruteur et commencez à gérer les évaluations",
+    "recruiterWelcomeTitle": "Bienvenue sur SkillNet",
+    "recruiterWelcomeDescription": "Rejoignez notre plateforme en tant que recruteur pour trouver les meilleurs candidats et publier des opportunités d'emploi pour votre organisation.",
+    "recruiterFeatures": {
+      "postJobs": "Publier des opportunités d'emploi",
+      "findCandidates": "Trouver des candidats qualifiés",
+      "reviewAssessments": "Examiner les évaluations des candidats",
+      "buildPipeline": "Construire votre pipeline de talents"
+    }
+  },
+  "ResetPassword": {
+    "logoAlt": "Logo de l'entreprise",
+    "title": "Définir un nouveau mot de passe",
+    "newPasswordLabel": "Nouveau mot de passe",
+    "newPasswordPlaceholder": "Entrez un nouveau mot de passe",
+    "confirmPasswordLabel": "Confirmer le nouveau mot de passe",
+    "confirmPasswordPlaceholder": "Confirmez votre nouveau mot de passe",
+    "showPassword": "Afficher le mot de passe",
+    "hidePassword": "Masquer le mot de passe",
+    "updatePassword": "Mettre à jour le mot de passe",
+    "updating": "Mise à jour...",
+    "successMessage": "Mot de passe mis à jour avec succès",
+    "errorMessage": "Erreur lors de la mise à jour du mot de passe",
+    "passwordMismatch": "Les mots de passe ne correspondent pas"
+  },
+  "ForgotPassword": {
+    "logoAlt": "Logo de l'entreprise",
+    "title": "Réinitialisez votre mot de passe",
+    "description": "Entrez votre adresse e-mail et nous vous enverrons des instructions pour réinitialiser votre mot de passe.",
+    "emailLabel": "Adresse e-mail",
+    "emailPlaceholder": "Entrez votre e-mail",
+    "sendInstructions": "Envoyer les instructions de réinitialisation",
+    "sending": "Envoi en cours...",
+    "successMessage": "Les instructions de réinitialisation du mot de passe ont été envoyées à votre adresse e-mail",
+    "errorMessage": "Une erreur s'est produite lors de la réinitialisation du mot de passe",
+    "backToLogin": "Retour à la connexion"
+  },
+  "LoginUser": {
+    "toastLoading": "Connexion en cours...",
+    "toastSuccess": "Bienvenue, {{email}} !",
+    "toastError": "Échec de la connexion : {{error}}",
+    "noProfileFound": "Aucun profil trouvé pour cet e-mail",
+    "noUserSession": "Aucune session utilisateur trouvée après la connexion",
+    "user": "utilisateur"
+  },
+  "CreateUser": {
+    "fillAllFields": "Veuillez remplir tous les champs",
+    "invalidRole": "Rôle sélectionné non valide",
+    "emailServiceError": "Il y a eu un problème avec le service d'authentification. Votre compte a peut-être été créé, mais l'e-mail de confirmation pourrait être retardé.",
+    "emailServiceIssue": "Il y a eu un problème lors de l'envoi de l'e-mail de confirmation. Si vous ne recevez pas d'e-mail, veuillez contacter le support.",
+    "partialRegistration": "Votre compte a peut-être été créé mais nous n'avons pas pu terminer la configuration de votre profil. Veuillez contacter le support.",
+    "accountCreatedNoEmail": "Compte créé, mais il y a eu un problème lors de l'envoi de l'e-mail de confirmation. Veuillez contacter le support.",
+    "profileCreationFailed": "Votre compte a été créé mais nous n'avons pas pu configurer votre profil. Veuillez contacter le support.",
+    "emailExists": "Un compte avec cet e-mail existe déjà",
+    "failedToCreate": "Échec de la création de l'utilisateur",
+    "checkEmail": "Veuillez vérifier votre e-mail pour le lien de confirmation ! Si vous ne voyez pas notre message, assurez-vous de vérifier votre dossier spam.",
+    "genericError": "Une erreur s'est produite lors de l'inscription"
+  },
+  "ProfileRecruiter": {
+    "companyProfile": "Profil d'entreprise",
+    "companyInfo": "Informations sur votre entreprise",
+    "editProfile": "Modifier le profil",
+    "companyLogo": "Logo de l'entreprise",
+    "companyName": "Nom de l'entreprise",
+    "contactEmail": "E-mail de contact",
+    "notProvided": "Non fourni",
+    "companyDescription": "Description de l'entreprise",
+    "noDescriptionProvided": "Aucune description fournie",
+    "whoWeAre": "Qui sommes-nous",
+    "noInformationProvided": "Aucune information fournie",
+    "autoIncludeInfo": "Ces informations seront automatiquement incluses dans toutes vos offres d'emploi.",
+    "somethingWentWrong": "Une erreur s'est produite"
+  },
+  "ProfileRecruiterUpdate": {
+    "editCompanyProfile": "Modifier le profil d'entreprise",
+    "updateCompanyInfo": "Mettez à jour les informations de votre entreprise",
+    "companyLogo": "Logo de l'entreprise",
+    "uploadLogo": "Télécharger le logo",
+    "companyName": "Nom de l'entreprise",
+    "companyNameRequired": "Le nom de l'entreprise est requis",
+    "enterCompanyName": "Entrez le nom de l'entreprise",
+    "contactEmail": "E-mail de contact",
+    "emailRequired": "L'e-mail est requis",
+    "invalidEmail": "Adresse e-mail non valide",
+    "enterContactEmail": "Entrez l'e-mail de contact",
+    "companyDescription": "Description de l'entreprise",
+    "companyDescriptionRequired": "La description de l'entreprise est requise",
+    "enterCompanyDescription": "Entrez la description de l'entreprise",
+    "whoWeAre": "Qui sommes-nous",
+    "autoIncludeInfo": "Ces informations seront automatiquement incluses dans toutes vos offres d'emploi",
+    "describeCompanyCulture": "Décrivez la culture de votre entreprise, ses valeurs et son équipe...",
+    "createProfile": "Créer un profil",
+    "updateProfile": "Mettre à jour le profil",
+    "creating": "Création en cours...",
+    "updating": "Mise à jour en cours...",
+    "noAuthUser": "Aucun utilisateur authentifié trouvé",
+    "failedToLoadProfile": "Échec du chargement des données du profil",
+    "failedToUploadLogo": "Échec du téléchargement du logo",
+    "noUserEmail": "Aucun e-mail utilisateur trouvé",
+    "profileCreatedSuccess": "Profil créé avec succès",
+    "profileUpdatedSuccess": "Profil mis à jour avec succès",
+    "failedToUpdateProfile": "Échec de la mise à jour du profil",
+    "errorUpdatingProfile": "Erreur lors de la mise à jour du profil"
+  },
+  "EditJobForm": {
+    "titles": {
+      "editJob": "Modifier les détails de l'emploi",
+      "editJobPosting": "Modifier l'offre d'emploi",
+      "candidateRequirements": "Exigences pour les candidats"
+    },
+    "labels": {
+      "roleTitle": "Titre du poste",
+      "jobType": "Type d'emploi",
+      "categories": "Catégories",
+      "requiredSkills": "Compétences requises",
+      "currentFilledPositions": "Postes actuellement pourvus",
+      "positionsNeeded": "Postes nécessaires",
+      "endDate": "Date de fin",
+      "status": "Statut",
+      "location": "Lieu",
+      "salaryRange": "Fourchette de salaire",
+      "responsibilities": "Responsabilités",
+      "additionalRequirements": "Exigences supplémentaires",
+      "genderPreference": "Préférence de genre",
+      "countryOfBirth": "Pays de naissance",
+      "minYearsExperience": "Années d'expérience minimum",
+      "requiredQualifications": "Qualifications requises"
+    },
+    "placeholders": {
+      "loadingCountries": "Chargement des pays...",
+      "selectCountry": "Sélectionnez un pays",
+      "cityLocation": "Ville ou lieu spécifique",
+      "minimumSalary": "Salaire minimum",
+      "maximumSalary": "Salaire maximum",
+      "anyGender": "Tous genres",
+      "selectCountryOfBirth": "Sélectionnez le pays de naissance",
+      "selectOrCreateSkills": "Sélectionnez ou créez des compétences requises",
+      "selectQualifications": "Sélectionnez les qualifications requises"
+    },
+    "info": {
+      "applicantPositions": "{capacity} candidat(s), {needed} poste(s) nécessaire(s)",
+      "selectedCountry": "Pays sélectionné : {country}",
+      "pleaseSelectCountry": "Veuillez sélectionner un pays",
+      "citySelected": ", Ville : {city}"
+    },
+    "actions": {
+      "hideFilters": "Masquer les filtres",
+      "showFilters": "Afficher les filtres",
+      "addOption": "Ajouter \"{option}\"",
+      "cancel": "Annuler",
+      "updating": "Mise à jour en cours...",
+      "updateJobPosting": "Mettre à jour l'offre d'emploi"
+    },
+    "errors": {
+      "failedToLoadCountries": "Échec du chargement des pays",
+      "selectCountry": "Veuillez sélectionner un pays",
+      "failedToUpdate": "Échec de la mise à jour de l'offre d'emploi"
+    },
+    "success": {
+      "jobUpdated": "Offre d'emploi mise à jour avec succès"
+    },
+    "categories": {
+      "software": "Développement logiciel",
+      "marketing": "Marketing",
+      "finance": "Finance",
+      "sales": "Ventes",
+      "design": "Design"
+    },
+    "skills": {
+      "marketing": "Marketing",
+      "sales": "Ventes"
+    },
+    "jobTypes": {
+      "fullTime": "Temps plein",
+      "partTime": "Temps partiel",
+      "contract": "Contrat",
+      "freelance": "Freelance"
+    },
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "gender": {
+      "male": "Homme",
+      "female": "Femme",
+      "other": "Autre"
+    },
+    "qualifications": {
+      "advancedLevel": "Niveau avancé",
+      "higherNationalDiploma": "Diplôme national supérieur",
+      "bachelorDegree": "Licence",
+      "masterDegree": "Master",
+      "phd": "Doctorat"
+    }
+  },
+  "CandidatesModal": {
+    "titles": {
+      "candidatesFor": "Candidats pour {jobTitle}"
+    },
+    "tabs": {
+      "newApplications": "Nouvelles candidatures",
+      "processed": "Candidatures traitées"
+    },
+    "status": {
+      "accepted": "Accepté",
+      "pending": "En attente",
+      "rejected": "Rejeté"
+    },
+    "actions": {
+      "accept": "Accepter",
+      "decline": "Refuser",
+      "viewProfile": "Voir le profil",
+      "closePanel": "Fermer le panneau"
+    },
+    "labels": {
+      "skills": "Compétences"
+    },
+    "info": {
+      "totalApplications": "{count} candidatures au total"
+    },
+    "applied": "Postulé",
+    "anonymous": "Anonyme",
+    "defaultCompanyName": "Notre entreprise",
+    "noCandidates": {
+      "title": "Aucun candidat",
+      "description": "Personne n'a encore postulé pour ce poste.",
+      "newTitle": "Aucune nouvelle candidature",
+      "processedTitle": "Aucune candidature traitée",
+      "newDescription": "Il n'y a pas de nouvelles candidatures pour cette offre d'emploi",
+      "processedDescription": "Aucun candidat n'a encore été traité"
+    },
+    "errors": {
+      "companyInfoNotLoaded": "Informations sur l'entreprise non chargées",
+      "candidateNotFound": "Candidat non trouvé",
+      "failedToSendEmail": "Échec de l'envoi de l'e-mail",
+      "failedToUpdateStatus": "Échec de la mise à jour du statut du candidat"
+    },
+    "success": {
+      "candidateStatusUpdated": "Candidat {status} avec succès et e-mail de notification envoyé"
+    },
+    "emails": {
+      "accepted": {
+        "subject": "Félicitations ! Votre candidature pour {jobTitle} chez {companyName}",
+        "body": "Cher/Chère {candidateName},\n\nNous avons le plaisir de vous informer que votre candidature pour le poste de {jobTitle} chez {companyName} a été acceptée. Nous avons été impressionnés par vos qualifications et votre expérience, et nous pensons que vous seriez un atout précieux pour notre équipe.\n\nProchaines étapes :\n1. Veuillez répondre à cet e-mail pour confirmer votre intérêt continu\n2. Nous planifierons un entretien à un moment qui vous convient\n3. Lors de l'entretien, nous discuterons du poste en détail, y compris la rémunération et les avantages\n\nSi vous avez des questions immédiates, veuillez répondre directement à cet e-mail.\n\nNous avons hâte de vous parler bientôt.\n\nCordialement,\nL'équipe de recrutement\n{companyName}\n{companyEmail}"
+      },
+      "rejected": {
+        "subject": "Mise à jour concernant votre candidature pour {jobTitle} chez {companyName}",
+        "body": "Cher/Chère {candidateName},\n\nNous vous remercions de votre intérêt pour le poste de {jobTitle} chez {companyName} et d'avoir pris le temps de participer à notre processus de candidature.\n\nAprès un examen attentif de toutes les candidatures, nous regrettons de vous informer que nous avons décidé de poursuivre avec d'autres candidats dont les qualifications correspondent plus étroitement à nos exigences actuelles.\n\nVeuillez noter que cette décision ne reflète pas vos capacités, et nous vous encourageons à postuler pour d'autres postes qui correspondent à vos compétences et à votre expérience à l'avenir.\n\nNous conserverons votre candidature dans nos dossiers pour d'éventuels postes futurs qui vous conviendraient.\n\nNous vous souhaitons le meilleur dans votre recherche d'emploi et vos projets professionnels.\n\nCordialement,\nL'équipe de recrutement\n{companyName}\n{companyEmail}"
+      }
+    }
+  },
+  "details": {
+    "back": "Retour",
+    "loading": "Chargement des résultats",
+    "loadingDescription": "Veuillez patienter pendant que nous traitons votre demande"
+  },
+  "profile": {
+    "altProfileImage": "Image de profil",
+    "defaultJob": "Développement de produits",
+    "aboutMe": "À propos de moi",
+    "contact": "Contact",
+    "email": "E-mail",
+    "phone": "Téléphone",
+    "instagram": "Instagram",
+    "twitter": "Twitter",
+    "website": "Site web",
+    "altEmailIcon": "Icône e-mail",
+    "altPhoneIcon": "Icône téléphone",
+    "altInstagramIcon": "Icône Instagram",
+    "altTwitterIcon": "Icône Twitter",
+    "altWebsiteIcon": "Icône site web"
+  },
+  "application": {
+    "tabs": {
+      "applicationProfile": "Profil de candidature",
+      "resume": "CV",
+      "testingSchedule": "Calendrier des tests"
+    },
+    "profile": {
+      "sections": {
+        "personalInformation": "Informations personnelles",
+        "educationalInformation": "Informations éducatives",
+        "professionalInformation": "Informations professionnelles"
+      },
+      "personal": {
+        "fullName": "Nom complet",
+        "dateOfBirth": "Date de naissance",
+        "birthDateWithAge": "{{date}} ({{age}} ans)",
+        "address": "Adresse",
+        "gender": "Genre",
+        "language": "Langue"
+      },
+      "education": {
+        "highestQualification": "Plus haute qualification",
+        "aLevelSubjects": "Matières de niveau avancé",
+        "grade": "Note",
+        "fieldOfStudy": "Domaine d'étude",
+        "specialization": "Spécialisation",
+        "degreeTitle": "Intitulé du diplôme",
+        "institution": "Institution",
+        "thesis": "Thèse",
+        "thesisTitle": "Titre de la thèse",
+        "fieldOfResearch": "Domaine de recherche",
+        "researchSummary": "Résumé de la recherche"
+      },
+      "professional": {
+        "currentJob": "Emploi actuel",
+        "experience": "Expérience",
+        "yearsOfExperience": "{{years}} ans",
+        "skills": "Compétences",
+        "noSkills": "Aucune compétence listée"
+      }
+    },
+    "resume": {
+      "iframeTitle": "CV PDF"
+    },
+    "schedule": {
+      "assessmentHistory": "Historique des évaluations",
+      "total": "Total",
+      "singleAssessment": "évaluation",
+      "multipleAssessments": "évaluations",
+      "loadingAssessments": "Chargement des évaluations...",
+      "noAssessments": "Aucun historique d'évaluation trouvé",
+      "subjectScores": "Scores par matière",
+      "noSubjectScores": "Aucun score par matière disponible",
+      "category": "Catégorie",
+      "unknownExam": "Examen inconnu",
+      "subjects": {
+        "ProfitLoss": "Profits et pertes",
+        "BalanceSheet": "Bilan",
+        "MarketEvaluation": "Évaluation de marché",
+        "AccountingPrinciples": "Principes comptables",
+        "AuditReporting": "Rapports d'audit",
+        "AP": "Comptes fournisseurs",
+        "AR": "Comptes clients",
+        "ME": "Évaluation de marché",
+        "BS": "Bilan",
+        "P&L": "Profits et pertes"
+      }
+    }
+  },
+  "registerFace": {
+    "title": "Enregistrement du visage",
+    "description": "Veuillez centrer votre visage dans le cadre et assurer un bon éclairage",
+    "loading": {
+      "general": "Chargement...",
+      "models": "Chargement des modèles de détection faciale...",
+      "camera": "Initialisation de la caméra..."
+    },
+    "errors": {
+      "browserSupport": "Votre navigateur ne prend pas en charge l'accès à la caméra.",
+      "modelLoading": "Échec du chargement des modèles de détection faciale. Veuillez réessayer.",
+      "cameraAccess": "Échec de l'accès à la caméra. Veuillez vérifier vos autorisations.",
+      "checkRegistration": "Échec de la vérification du statut d'enregistrement. Veuillez réessayer.",
+      "noFaceDetected": "Aucun visage détecté. Veuillez vous assurer que votre visage est clairement visible.",
+      "multipleFaces": "Plusieurs visages détectés. Veuillez vous assurer que seul votre visage est dans le cadre.",
+      "registrationFailed": "L'enregistrement du visage a échoué. Veuillez réessayer.",
+      "savingFailed": "Échec de l'enregistrement des données faciales. Veuillez réessayer."
+    },
+    "toast": {
+      "startRegistration": "Début de l'enregistrement du visage. Veuillez rester immobile...",
+      "multipleFaces": "Plusieurs visages détectés. Veuillez vous assurer que vous êtes seul dans le cadre.",
+      "captureFailed": "Erreur lors de la capture de l'échantillon facial. Veuillez réessayer.",
+      "registrationFailed": "L'enregistrement du visage a échoué. Veuillez réessayer.",
+      "savingData": "Enregistrement de vos données faciales...",
+      "registrationSuccess": "Enregistrement du visage réussi !",
+      "savingFailed": "Échec de l'enregistrement des données faciales. Veuillez réessayer."
+    },
+    "faceDetected": "Visage détecté",
+    "positionFace": "Positionnez votre visage ici",
+    "registeringFace": "Enregistrement de votre visage...",
+    "keepStill": "Veuillez rester immobile",
+    "registrationSuccessful": "Enregistrement réussi !",
+    "captureProgress": "Progression de la capture",
+    "captureCount": "{{current}}/{{total}} captures",
+    "buttons": {
+      "register": "Enregistrer le visage",
+      "registering": "Enregistrement du visage..."
+    },
+    "tips": {
+      "title": "Conseils pour de meilleurs résultats :",
+      "lighting": "Assurez-vous que votre visage est bien éclairé",
+      "lookAtCamera": "Regardez directement la caméra",
+      "neutralExpression": "Gardez une expression neutre",
+      "glasses": "Retirez vos lunettes si possible",
+      "movements": "Évitez les mouvements rapides"
+    },
+    "securityNote": "Vos données faciales seront stockées en toute sécurité pour vérification"
+  },
+  "dropzone": {
+    "reading": "Lecture du fichier...",
+    "validating": "Validation des données...",
+    "processing": "Traitement des données...",
+    "creatingSubcategories": "Création des sous-catégories...",
+    "uploading": "Téléchargement des questions...",
+    "uploadingBatch": "Téléchargement du lot {current} sur {total}...",
+    "success": "Téléchargement réussi de {count} questions",
+    "uploadPrompt": "Télécharger des questions",
+    "dropHere": "Déposez le fichier ici",
+    "dragAndDrop": "Glissez-déposez un fichier Excel ou CSV ici, ou cliquez pour sélectionner",
+    "requiredFormat": "Format requis",
+    "templateFilename": "modele_questions_quiz",
+    "format": {
+      "function": "Discipline principale (ex. Finance, RH)",
+      "subcategory": "Sous-catégorie (ex. Finance_Bases)",
+      "area": "Zone spécifique dans la discipline",
+      "question": "Le texte complet de la question",
+      "options": "Options de réponse",
+      "correctAnswer": "Lettre de la réponse correcte (A, B, C ou D)",
+      "timing": "Temps en minutes (valeur numérique uniquement, ex. 2)"
+    },
+    "notes": {
+      "templateFormat": "Format du modèle",
+      "templateDescription": "Le modèle suit le même format que le formulaire de question, avec ces champs :",
+      "functionDescription": "La catégorie principale de discipline (ex. \"Finance\", \"RH\")",
+      "subcategoryDescription": "Sous-catégorie plus spécifique (ex. \"Finance_Bases\")",
+      "areaDescription": "La zone spécifique dans la discipline (ex. \"AP\", \"FLUX DE TRÉSORERIE\")",
+      "questionDescription": "Le texte complet de la question",
+      "optionsDescription": "Les quatre options de réponse possibles",
+      "correctAnswerDescription": "La lettre de la réponse correcte (A, B, C ou D)",
+      "timingDescription": "Temps en minutes sous forme de nombre (ex. 2)",
+      "important": "Important",
+      "timingWarning": "Le champ Timing doit être une valeur numérique uniquement (ex. 2, pas \"2 min\").",
+      "note": "Note",
+      "downloadHelp": "Vous pouvez télécharger le modèle au format XLSX ou CSV en utilisant les boutons ci-dessus."
+    },
+    "buttons": {
+      "uploadMore": "Télécharger plus",
+      "tryAgain": "Réessayer"
+    },
+    "errors": {
+      "missingData": "Données requises manquantes à la ligne {row}, colonne \"{column}\"",
+      "batchUpload": "Échec du téléchargement du lot {batch} : {message}",
+      "general": "Une erreur s'est produite pendant le téléchargement"
+    },
+    "toast": {
+      "success": "Téléchargement réussi de {count} questions",
+      "error": "Erreur lors du téléchargement des questions"
+    }
+  },
+  "updateQuestion": {
+    "title": "Mettre à jour la question",
+    "editingQuestion": "Modification de la question : {{serial}} - {{preview}}",
+    "fields": {
+      "section": "Section",
+      "discipline": "Discipline",
+      "duration": "Durée",
+      "question": "Question",
+      "responses": "Réponses",
+      "correctAnswer": "Réponse correcte"
+    },
+    "placeholders": {
+      "section": "Entrez la section",
+      "question": "Entrez votre question ici...",
+      "answer": "Réponse {{letter}}"
+    },
+    "timeUnits": {
+      "minutes": "min",
+      "hours": "h",
+      "seconds": "sec"
+    },
+    "buttons": {
+      "update": "Mettre à jour la question",
+      "updating": "Mise à jour..."
+    },
+    "errors": {
+      "missingFields": "Veuillez remplir tous les champs obligatoires",
+      "updateFailed": "Échec de la mise à jour de la question",
+      "noSections": "Aucune section trouvée",
+      "fetchFailed": "Erreur lors de la récupération des données"
+    },
+    "toast": {
+      "updating": "Mise à jour de la question..."
+    },
+    "success": "Question mise à jour avec succès !"
+  },
+  "quizSlider": {
+    "title": "Télécharger des questions",
+    "logs": {
+      "triggeringRefresh": "Déclenchement de l'actualisation du parent après téléchargement"
+    }
+  },
+  "deleteQuestionModal": {
+    "title": "Supprimer la question",
+    "confirmation": {
+      "prompt": "Êtes-vous sûr de vouloir supprimer cette question ?",
+      "warning": "Cette action ne peut pas être annulée."
+    },
+    "buttons": {
+      "cancel": "Annuler",
+      "delete": "Supprimer la question",
+      "deleting": "Suppression..."
+    },
+    "toast": {
+      "success": "Question supprimée avec succès",
+      "error": "Échec de la suppression de la question : {{error}}"
+    },
+    "logs": {
+      "error": "Erreur lors de la suppression de la question :"
+    }
+  },
+  "deleteSectionModal": {
+    "title": "Supprimer la section",
+    "warning": {
+      "permanent": "Cette action ne peut pas être annulée. Cela supprimera définitivement la",
+      "andQuestions": "section et toutes les questions associées."
+    },
+    "buttons": {
+      "cancel": "Annuler",
+      "delete": "Supprimer la section",
+      "deleting": "Suppression..."
+    },
+    "logs": {
+      "error": "Erreur lors de la suppression de la section :"
+    }
+  },
+  "editQuestionModal": {
+    "title": "Mettre à jour la question",
+    "closePanel": "Fermer le panneau",
+    "editingQuestion": "Modification de la question",
+    "fields": {
+      "section": "Section",
+      "discipline": "Discipline",
+      "duration": "Durée",
+      "question": "Question",
+      "responses": "Réponses",
+      "correctAnswer": "Réponse correcte"
+    },
+    "placeholders": {
+      "section": "Entrez la section",
+      "question": "Entrez votre question ici...",
+      "answer": "Réponse {{letter}}"
+    },
+    "timeUnits": {
+      "minutes": "min",
+      "hours": "h",
+      "seconds": "sec"
+    },
+    "buttons": {
+      "update": "Mettre à jour la question",
+      "updating": "Mise à jour..."
+    },
+    "validation": {
+      "requiredFields": "Veuillez remplir tous les champs obligatoires"
+    },
+    "toast": {
+      "loading": "Mise à jour de la question...",
+      "success": "Question mise à jour avec succès !",
+      "error": "Échec de la mise à jour de la question"
+    },
+    "errors": {
+      "noSections": "Aucune section trouvée",
+      "fetchFailed": "Erreur lors de la récupération des données"
+    },
+    "logs": {
+      "error": "Erreur lors de la mise à jour de la question :",
+      "fetchError": "Erreur :"
+    }
+  },
+  "AssessmentRules": {
+    "title": "Règles d'évaluation",
+    "subtitle": "Veuillez lire attentivement les règles suivantes avant de commencer",
+    "identityVerification": {
+      "title": "Vérification continue de l'identité",
+      "description": "Votre identité sera continuellement vérifiée tout au long de l'évaluation à l'aide de la technologie de reconnaissance faciale. Votre flux de webcam sera surveillé en temps réel pour assurer le respect des règles d'évaluation."
+    },
+    "timeLimit": {
+      "title": "Limite de temps",
+      "description": "Vous avez {minutes} minutes et {seconds} secondes pour compléter {questionCount} questions. L'évaluation sera automatiquement soumise lorsque le temps sera écoulé."
+    },
+    "supervision": {
+      "title": "Exigences strictes de supervision",
+      "description": "Vous devez rester seul et entièrement visible pour la caméra tout au long de l'évaluation. Le système surveillera continuellement votre présence et votre identité.",
+      "warning": "Votre évaluation sera interrompue si des violations sont détectées."
+    },
+    "prohibitedBehaviors": {
+      "title": "Comportements interdits",
+      "description": "Les actions suivantes entraîneront l'interruption immédiate de votre évaluation :",
+      "item1": "Avoir une autre personne visible dans le cadre de la caméra",
+      "item2": "Quitter le cadre de la caméra ou ne pas être visible",
+      "item3": "Faire passer l'évaluation par quelqu'un d'autre",
+      "item4": "Utiliser des ressources ou des appareils non autorisés"
+    },
+    "navigation": {
+      "title": "Navigation",
+      "description": "Vous pouvez naviguer entre les questions en utilisant les boutons Précédent et Suivant. Vous pouvez soumettre votre évaluation à tout moment en cliquant sur le bouton Soumettre."
+    },
+    "importantNotice": {
+      "title": "Avis important",
+      "description": "En poursuivant, vous consentez à une surveillance continue via votre webcam tout au long de l'évaluation. Le système enregistrera et analysera votre session pour garantir l'intégrité académique. Si le système détecte des violations, votre évaluation sera interrompue et votre score sera enregistré comme zéro."
+    },
+    "technicalRequirements": {
+      "title": "Exigences techniques",
+      "description": "Cette évaluation nécessite un accès à la caméra pour une supervision continue. Veuillez vous assurer que votre caméra est activée, fonctionne correctement et que vous êtes dans un environnement bien éclairé avec votre visage clairement visible."
+    },
+    "buttons": {
+      "cancel": "Annuler",
+      "agree": "J'accepte et je commence l'évaluation",
+      "preparing": "Préparation à l'évaluation..."
+    }
+  },
+  "SelectSection": {
+    "selectYourSection": "Sélectionnez votre section",
+    "section": "Section",
+    "selectSection": "Sélectionnez une section",
+    "continue": "Continuer",
+    "submitting": "Traitement...",
+    "notLoggedIn": "Vous devez être connecté pour sélectionner une section",
+    "errorFetchingSections": "Erreur lors de la récupération des sections disponibles",
+    "pleaseSelectSection": "Veuillez sélectionner une section pour continuer",
+    "sectionSelected": "Section mise à jour avec succès !",
+    "errorUpdatingProfile": "Erreur lors de la mise à jour de votre profil",
+    "loading": "Chargement des sections disponibles...",
+    "welcomeSubtext": "Veuillez sélectionner votre section pour continuer",
+    "sectionDescription": "Choisissez le département ou la section qui correspond le mieux à votre expertise",
+    "helpText": "Cela nous aidera à personnaliser votre expérience",
+    "commonSections": "Sections courantes",
+    "otherSections": "Autres sections",
+    "selectOtherSection": "Sélectionner une autre section",
+    "backToCommonSections": "Retour aux sections courantes",
+    "viewOtherSections": "Voir les autres sections",
+    "noOtherSections": "Aucune section supplémentaire disponible",
+    "needHelp": "Besoin d'aide ? Contactez"
+  },
+
+  "Examiners": {
+    "pageTitle": "Gestion des examinateurs",
+    "title": "Examinateurs",
+    "description": "Gérez les examinateurs qui examinent les soumissions de tests des candidats et vérifient leur identité.",
+    "table": {
+      "examiner": "Examinateur",
+      "status": "Statut",
+      "assignedTests": "Tests assignés",
+      "completedReviews": "Examens terminés",
+      "lastActive": "Dernière activité",
+      "dateAdded": "Date d'ajout",
+      "actions": "Actions",
+      "neverLoggedIn": "Jamais connecté"
+    },
+    "status": {
+      "active": "Actif",
+      "inactive": "Inactif"
+    },
+    "buttons": {
+      "addExaminer": "Ajouter un examinateur",
+      "edit": "Modifier",
+      "delete": "Supprimer",
+      "sendInvite": "Envoyer une invitation",
+      "save": "Enregistrer",
+      "refreshStats": "Actualiser les statistiques",
+      "saving": "Enregistrement...",
+      "cancel": "Annuler"
+    },
+    "slider": {
+      "addTitle": "Ajouter un nouvel examinateur",
+      "editTitle": "Modifier l'examinateur"
+    },
+    "form": {
+      "name": "Nom complet",
+      "namePlaceholder": "Entrez le nom complet de l'examinateur",
+      "email": "Adresse e-mail",
+      "emailPlaceholder": "Entrez l'adresse e-mail de l'examinateur",
+      "emailNotEditable": "L'adresse e-mail ne peut pas être modifiée une fois créée",
+      "password": "Mot de passe",
+      "passwordPlaceholder": "Entrez un mot de passe sécurisé",
+      "newPassword": "Nouveau mot de passe",
+      "newPasswordPlaceholder": "Entrez un nouveau mot de passe (facultatif)",
+      "confirmPassword": "Confirmer le mot de passe",
+      "confirmPasswordPlaceholder": "Confirmez le mot de passe",
+      "leaveBlankPassword": "Laissez vide pour conserver le mot de passe actuel",
+      "status": "Statut",
+      "sendInvite": "Envoyer un e-mail d'invitation à cet examinateur",
+      "assignDisciplines": "Assigner des disciplines",
+      "disciplinesInfo": "Sélectionnez les disciplines que cet examinateur sera chargé d'examiner.",
+      "assignSubcategories": "Assigner des sous-catégories",
+      "subcategoriesInfo": "Sélectionnez éventuellement des sous-catégories spécifiques dans chaque discipline. Si aucune n'est sélectionnée, l'examinateur sera responsable de toutes les sous-catégories dans les disciplines sélectionnées.",
+      "noSubcategoriesAvailable": "Aucune sous-catégorie disponible pour les disciplines sélectionnées.",
+      "permissions": "Autorisations de l'examinateur",
+      "permissionsInfo": "Les examinateurs ont les autorisations suivantes :",
+      "permissionReview": "Examiner les soumissions de tests des candidats et les photos de surveillance",
+      "permissionApprove": "Approuver les soumissions de tests légitimes",
+      "permissionReject": "Rejeter les soumissions de tests suspectes",
+      "requiredFields": "Veuillez remplir tous les champs obligatoires",
+      "passwordRequired": "Le mot de passe est requis",
+      "passwordMismatch": "Les mots de passe ne correspondent pas",
+      "passwordTooShort": "Le mot de passe doit comporter au moins 6 caractères",
+      "disciplineRequired": "Veuillez sélectionner au moins une discipline"
+    },
+    "items": {
+      "examinerData": "examinateur"
+    },
+    "errors": {
+      "noDisciplines": "Aucune discipline trouvée",
+      "fetchingData": "Erreur lors de la récupération des disciplines",
+      "fetchSubcategories": "Erreur lors de la récupération des sous-catégories"
+    },
+    "addSuccess": "Examinateur ajouté avec succès",
+    "updateSuccess": "Examinateur mis à jour avec succès",
+    "saveError": "Échec de l'enregistrement des données de l'examinateur : {error}",
+    "deleteSuccess": "Examinateur supprimé avec succès",
+    "deleteError": "Échec de la suppression de l'examinateur. Veuillez réessayer.",
+    "inviteSent": "Invitation envoyée à {email}",
+    "inviteError": "Échec de l'envoi de l'invitation. Veuillez réessayer.",
+    "inviteEmailFailed": "L'examinateur a été créé mais l'e-mail d'invitation n'a pas pu être envoyé"
+  },
+
+  "EvaluationCheck": {
+    "title": "Évaluation des tests",
+    "description": "Examiner et évaluer les soumissions de tests des candidats",
+    "fetchError": "Échec de la récupération des affectations",
+    "reviewNotesRequired": "Les notes d'évaluation sont requises",
+    "approvalSuccess": "Test approuvé avec succès",
+    "approvalSuccessWithEmail": "Test approuvé avec succès et e-mail de notification envoyé",
+    "rejectionSuccessWithEmail": "Test rejeté avec succès et e-mail de notification envoyé",
+    "approvalError": "Échec de l'approbation du test",
+    "rejectionSuccess": "Test rejeté avec succès",
+    "rejectionError": "Échec du rejet du test",
+    "table": {
+      "candidate": "Candidat",
+      "testName": "Nom du test",
+      "score": "Score",
+      "submissionDate": "Date de soumission",
+      "status": "Statut",
+      "actions": "Actions"
+    },
+    "status": {
+      "pending": "En attente",
+      "in_progress": "En cours",
+      "completed": "Terminé"
+    },
+    "reviewSlider": {
+      "title": "Examiner le test",
+      "email": "E-mail",
+      "testType": "Type de test",
+      "score": "Score",
+      "submissionDate": "Date de soumission",
+      "subjectScores": "Scores par matière",
+      "viewPhotos": "Voir les photos",
+      "reviewSection": "Section d'évaluation",
+      "reviewScore": "Score d'évaluation",
+      "reviewScorePlaceholder": "Entrez le score d'évaluation",
+      "reviewNotes": "Notes d'évaluation",
+      "reviewNotesPlaceholder": "Entrez vos notes d'évaluation ici...",
+      "snapshots": "Instantanés ({count})",
+      "snapshotInfo": "Instantané {current} sur {total}",
+      "previousSnapshot": "Précédent",
+      "nextSnapshot": "Suivant",
+      "noSnapshots": "Aucun instantané disponible pour ce test",
+      "snapshotAnalysis": "Analyse des instantanés"
+    },
+    "reviewDialog": {
+      "title": "Photos du test de {name}",
+      "testInfo": "{test} - Score : {score}",
+      "photoInfo": "Photo {current} sur {total}",
+      "noPhotos": "Aucune photo disponible",
+      "noPhotosAvailable": "Aucune photo disponible",
+      "previousPhoto": "Précédent",
+      "nextPhoto": "Suivant"
+    },
+    "snapshotTable": {
+      "time": "Heure",
+      "status": "Statut",
+      "verified": "Vérifié",
+      "faceDetected": "Visage détecté",
+      "multipleFaces": "Plusieurs visages"
+    },
+    "tabs": {
+      "testDetails": "Détails du test",
+      "snapshots": "Instantanés"
+    },
+    "buttons": {
+      "review": "Examiner",
+      "alreadyReviewed": "Déjà examiné",
+      "approve": "Approuver",
+      "reviewTest": "Examiner le test",
+      "reject": "Rejeter",
+      "cancel": "Annuler",
+      "close": "Fermer"
+    }
+  }
+}

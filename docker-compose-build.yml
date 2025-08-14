@@ -1,0 +1,10 @@
+services:
+  skillnet:
+    container_name: skillnet
+    image: ghcr.io/instanvi/skillnet/app:latest
+    expose:
+      - "3000"
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production

@@ -1,0 +1,5 @@
+*.js linguist-language=TypeScript
+*.jsx linguist-language=TypeScript
+*.mjs linguist-language=TypeScript
+public/pdf.worker.min.mjs linguist-vendored=true
+public/models/* linguist-vendored=true

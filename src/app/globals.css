@@ -1,0 +1,311 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .form-input {
+    @apply px-3 py-2 bg-white border border-gray-300 rounded-lg shadow-sm;
+    @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500;
+    @apply block w-full sm:text-sm;
+  }
+
+  .form-select {
+    @apply form-input;
+  }
+
+  .form-textarea {
+    @apply form-input;
+  }
+}
+
+/* Define the font-outfit class explicitly */
+.font-outfit {
+  font-family: "Outfit", sans-serif !important;
+}
+
+/* Apply the font to all text elements */
+@layer base {
+  html,
+  body,
+  p,
+  a,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  span,
+  div,
+  button,
+  input,
+  textarea,
+  select {
+    font-family: "Outfit", sans-serif;
+  }
+}
+
+.SG-datepicker__calendar-container {
+  margin-left: -100px !important;
+}
+
+.SG-datepicker__input-container {
+  border: 0.5px solid #7cb5db !important;
+}
+
+.SG-datepicker__input-container input {
+  border: none !important;
+}
+
+/* Override the pro sidebar specific styles */
+.ps-sidebar-root {
+  background-color: #10b981 !important;
+}
+
+.ps-sidebar-container {
+  background-color: #10b981 !important;
+}
+
+.ps-menu-root {
+  background-color: #10b981 !important;
+}
+
+.bar::-webkit-scrollbar {
+  display: none;
+  background-color: red;
+}
+
+.quill {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+}
+
+.ql-container {
+  flex: 1;
+  overflow-y: auto;
+  /* border: none !important; */
+}
+
+.ql-editor {
+  min-height: 200px;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 1rem;
+}
+
+.ql-toolbar {
+  border: none !important;
+  border-bottom: 1px solid #e5e7eb !important;
+  background-color: #f9fafb;
+}
+
+.ql-toolbar.ql-snow,
+.ql-container.ql-snow {
+  border: none;
+}
+
+/* Fix toolbar button hover states */
+.ql-snow.ql-toolbar button:hover,
+.ql-snow .ql-toolbar button:hover {
+  color: #2563eb;
+}
+
+.ql-snow.ql-toolbar button:hover .ql-fill,
+.ql-snow .ql-toolbar button:hover .ql-fill {
+  fill: #2563eb;
+}
+
+.ql-snow.ql-toolbar button:hover .ql-stroke,
+.ql-snow .ql-toolbar button:hover .ql-stroke {
+  stroke: #2563eb;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.MuiInputBase-root,
+.MuiTypography-root,
+.MuiButtonBase-root,
+.MuiChip-root,
+.MuiFormLabel-root {
+  font-family: "outfit" !important;
+}
+
+/* Custom Scrollbar Styles */
+@layer base {
+  /* Webkit browsers (Chrome, Safari, Edge) */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgb(31 41 55); /* Dark gray background */
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgb(16 185 129); /* Emerald color */
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(5 150 105); /* Darker emerald on hover */
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: rgb(31 41 55);
+  }
+
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(16 185 129) rgb(31 41 55);
+  }
+
+  /* Light mode scrollbars */
+  .light ::-webkit-scrollbar-track {
+    background: rgb(243 244 246); /* Light gray background */
+  }
+
+  .light ::-webkit-scrollbar-thumb {
+    background: rgb(16 185 129); /* Emerald color */
+  }
+
+  .light ::-webkit-scrollbar-thumb:hover {
+    background: rgb(5 150 105); /* Darker emerald on hover */
+  }
+
+  .light ::-webkit-scrollbar-corner {
+    background: rgb(243 244 246);
+  }
+
+  /* Dark mode scrollbars */
+  .dark ::-webkit-scrollbar-track {
+    background: rgb(31 41 55); /* Dark gray background */
+  }
+
+  .dark ::-webkit-scrollbar-thumb {
+    background: rgb(16 185 129); /* Emerald color */
+  }
+
+  .dark ::-webkit-scrollbar-thumb:hover {
+    background: rgb(5 150 105); /* Darker emerald on hover */
+  }
+
+  .dark ::-webkit-scrollbar-corner {
+    background: rgb(31 41 55);
+  }
+
+  /* Specific scrollbar styles for different elements */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgb(16 185 129 / 0.5);
+    border-radius: 3px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgb(16 185 129 / 0.8);
+  }
+
+  /* Thin scrollbar variant */
+  .thin-scrollbar::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  .thin-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .thin-scrollbar::-webkit-scrollbar-thumb {
+    background: rgb(16 185 129 / 0.3);
+    border-radius: 2px;
+  }
+
+  .thin-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgb(16 185 129 / 0.6);
+  }
+
+  /* Hide scrollbar but keep functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+}
