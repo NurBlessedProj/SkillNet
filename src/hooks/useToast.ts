@@ -31,8 +31,8 @@ export const useToast = () => {
       error,
     }: {
       loading: string;
-      success: string;
-      error: string;
+      success: string | ((data: T) => string);
+      error: string | ((err: any) => string);
     }
   ) => {
     return toast.promise(promise, {
@@ -50,4 +50,3 @@ export const useToast = () => {
     promise,
   };
 };
-

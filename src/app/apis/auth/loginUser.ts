@@ -276,8 +276,13 @@ export const LoginUser = () => {
     // Use promise toast with i18n translations
     promise(myPromise, {
       loading: t("LoginUser.toastLoading"),
-      success: t("LoginUser.toastSuccess"),
-      error: t("LoginUser.toastError"),
+      success: (data: any) => {
+        const userEmail = data?.email || t("LoginUser.user");
+        return t.raw("LoginUser.toastSuccess").replace("{{email}}", userEmail);
+      },
+      error: (err: any) => {
+        return t.raw("LoginUser.toastError").replace("{{error}}", err);
+      },
     });
   };
 
