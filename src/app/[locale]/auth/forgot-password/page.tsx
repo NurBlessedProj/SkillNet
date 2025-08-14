@@ -165,19 +165,18 @@ export default function ForgotPassword() {
           <div className="relative z-10 flex flex-col justify-center px-6 md:px-8 lg:px-12 text-white">
             <div className="max-w-sm md:max-w-md">
               {/* Logo */}
-              <div className="flex justify-center mb-6 md:mb-8">
+              <div className="flex justify-start ">
                 <img
-                  src="/skillnet_logo.png"
-                  className="h-16 md:h-20 w-auto"
+                  src="/logo_side.png"
+                  className="h-20 md:h-20 w-auto"
                   alt={t("Auth.logoAlt")}
                 />
               </div>
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6">
-                Reset Your Password
+                {t("Auth.welcomeToSkillNet")}
               </h2>
               <p className="text-base md:text-lg lg:text-xl text-emerald-100 mb-6 md:mb-8 leading-relaxed">
-                Don't worry! We'll help you get back to your account with secure
-                password reset instructions.
+                {t("Auth.welcomeDescription")}
               </p>
 
               {/* Feature Highlights */}
@@ -185,25 +184,25 @@ export default function ForgotPassword() {
                 <div className="flex items-center space-x-2 md:space-x-3">
                   <div className="w-1.5 md:w-2 h-1.5 md:h-2 bg-emerald-300 rounded-full"></div>
                   <span className="text-sm md:text-base text-emerald-100">
-                    Secure Password Reset
+                    {t("Auth.featureRealTimeRecognition")}
                   </span>
                 </div>
                 <div className="flex items-center space-x-2 md:space-x-3">
                   <div className="w-1.5 md:w-2 h-1.5 md:h-2 bg-emerald-300 rounded-full"></div>
                   <span className="text-sm md:text-base text-emerald-100">
-                    Email Verification
+                    {t("Auth.featureAutomatedProctoring")}
                   </span>
                 </div>
                 <div className="flex items-center space-x-2 md:space-x-3">
                   <div className="w-1.5 md:w-2 h-1.5 md:h-2 bg-emerald-300 rounded-full"></div>
                   <span className="text-sm md:text-base text-emerald-100">
-                    Quick Recovery Process
+                    {t("Auth.featureIntelligentAssessment")}
                   </span>
                 </div>
                 <div className="flex items-center space-x-2 md:space-x-3">
                   <div className="w-1.5 md:w-2 h-1.5 md:h-2 bg-emerald-300 rounded-full"></div>
                   <span className="text-sm md:text-base text-emerald-100">
-                    24/7 Account Access
+                    {t("Auth.featureAnalyticsDashboard")}
                   </span>
                 </div>
               </div>

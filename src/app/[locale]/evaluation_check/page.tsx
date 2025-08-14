@@ -1429,7 +1429,12 @@ const EvaluationCheckPage = () => {
               <Grid container spacing={3}>
                 <Grid item xs={12} md={3}>
                   <FormControl fullWidth size="small">
-                    <InputLabel id="status-filter-label" className="text-gray-700 dark:text-gray-300">Status</InputLabel>
+                    <InputLabel
+                      id="status-filter-label"
+                      className="text-gray-700 dark:text-gray-300"
+                    >
+                      Status
+                    </InputLabel>
                     <Select
                       labelId="status-filter-label"
                       value={statusFilter}
@@ -1437,22 +1442,22 @@ const EvaluationCheckPage = () => {
                       onChange={(e) => setStatusFilter(e.target.value)}
                       className="text-gray-900 dark:text-white"
                       sx={{
-                        '& .MuiOutlinedInput-root': {
-                          '& fieldset': {
-                            borderColor: '#d1d5db',
+                        "& .MuiOutlinedInput-root": {
+                          "& fieldset": {
+                            borderColor: "#d1d5db",
                           },
-                          '&:hover fieldset': {
-                            borderColor: '#10b981',
+                          "&:hover fieldset": {
+                            borderColor: "#10b981",
                           },
-                          '&.Mui-focused fieldset': {
-                            borderColor: '#10b981',
+                          "&.Mui-focused fieldset": {
+                            borderColor: "#10b981",
                           },
                         },
-                        '& .MuiInputLabel-root': {
-                          color: '#6b7280',
+                        "& .MuiInputLabel-root": {
+                          color: "#6b7280",
                         },
-                        '& .MuiSelect-icon': {
-                          color: '#6b7280',
+                        "& .MuiSelect-icon": {
+                          color: "#6b7280",
                         },
                       }}
                     >
@@ -1466,7 +1471,12 @@ const EvaluationCheckPage = () => {
 
                 <Grid item xs={12} md={3}>
                   <FormControl fullWidth size="small">
-                    <InputLabel id="examiner-filter-label" className="text-gray-700 dark:text-gray-300">Examiner</InputLabel>
+                    <InputLabel
+                      id="examiner-filter-label"
+                      className="text-gray-700 dark:text-gray-300"
+                    >
+                      Examiner
+                    </InputLabel>
                     <Select
                       labelId="examiner-filter-label"
                       value={examinerFilter}
@@ -1474,22 +1484,22 @@ const EvaluationCheckPage = () => {
                       onChange={(e) => setExaminerFilter(e.target.value)}
                       className="text-gray-900 dark:text-white"
                       sx={{
-                        '& .MuiOutlinedInput-root': {
-                          '& fieldset': {
-                            borderColor: '#d1d5db',
+                        "& .MuiOutlinedInput-root": {
+                          "& fieldset": {
+                            borderColor: "#d1d5db",
                           },
-                          '&:hover fieldset': {
-                            borderColor: '#10b981',
+                          "&:hover fieldset": {
+                            borderColor: "#10b981",
                           },
-                          '&.Mui-focused fieldset': {
-                            borderColor: '#10b981',
+                          "&.Mui-focused fieldset": {
+                            borderColor: "#10b981",
                           },
                         },
-                        '& .MuiInputLabel-root': {
-                          color: '#6b7280',
+                        "& .MuiInputLabel-root": {
+                          color: "#6b7280",
                         },
-                        '& .MuiSelect-icon': {
-                          color: '#6b7280',
+                        "& .MuiSelect-icon": {
+                          color: "#6b7280",
                         },
                       }}
                     >
@@ -1512,19 +1522,19 @@ const EvaluationCheckPage = () => {
                     onChange={(e) => setSearchQuery(e.target.value)}
                     className="text-gray-900 dark:text-white"
                     sx={{
-                      '& .MuiOutlinedInput-root': {
-                        '& fieldset': {
-                          borderColor: '#d1d5db',
+                      "& .MuiOutlinedInput-root": {
+                        "& fieldset": {
+                          borderColor: "#d1d5db",
                         },
-                        '&:hover fieldset': {
-                          borderColor: '#10b981',
+                        "&:hover fieldset": {
+                          borderColor: "#10b981",
                         },
-                        '&.Mui-focused fieldset': {
-                          borderColor: '#10b981',
+                        "&.Mui-focused fieldset": {
+                          borderColor: "#10b981",
                         },
                       },
-                      '& .MuiInputLabel-root': {
-                        color: '#6b7280',
+                      "& .MuiInputLabel-root": {
+                        color: "#6b7280",
                       },
                     }}
                     InputProps={{
@@ -1737,7 +1747,9 @@ const EvaluationCheckPage = () => {
                         <p className="text-sm text-gray-500 dark:text-gray-400">
                           {t("reviewSlider.testType")}
                         </p>
-                        <p className="font-medium text-gray-900 dark:text-white">{selectedSubmission.exam}</p>
+                        <p className="font-medium text-gray-900 dark:text-white">
+                          {selectedSubmission.exam}
+                        </p>
                       </div>
                       <div>
                         <p className="text-sm text-gray-500 dark:text-gray-400">
@@ -1940,7 +1952,9 @@ const EvaluationCheckPage = () => {
 
                           {/* Add a summary section */}
                           <div className="mt-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600">
-                            <h5 className="font-medium mb-2 text-gray-900 dark:text-white">Summary</h5>
+                            <h5 className="font-medium mb-2 text-gray-900 dark:text-white">
+                              Summary
+                            </h5>
                             <p className="text-sm text-gray-600 dark:text-gray-400">
                               {selectedSubmission.photos.length > 0
                                 ? `This test has ${
@@ -1958,8 +1972,8 @@ const EvaluationCheckPage = () => {
                         </div>
                       </div>
                     ) : (
-                      <div className="flex items-center justify-center h-[200px] bg-gray-100 rounded-lg">
-                        <p className="text-gray-500">
+                      <div className="flex items-center justify-center h-[200px] bg-gray-100 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600">
+                        <p className="text-gray-500 dark:text-gray-400">
                           No snapshots available for this test
                         </p>
                       </div>
@@ -1968,19 +1982,19 @@ const EvaluationCheckPage = () => {
                 )}
               </div>
 
-              <div className="bg-white rounded-lg shadow p-6">
-                <h3 className="text-lg font-bold mb-4">
+              <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6">
+                <h3 className="text-lg font-bold mb-4 text-gray-900 dark:text-white">
                   {t("reviewSlider.reviewSection")}
                 </h3>
 
                 <div className="mb-6">
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                     {t("reviewSlider.reviewNotes")}{" "}
                   </label>
                   <textarea
                     value={reviewNotes}
                     onChange={(e) => setReviewNotes(e.target.value)}
-                    className="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500 min-h-[120px]"
+                    className="w-full border border-gray-300 dark:border-gray-600 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-emerald-500 min-h-[120px] bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
                     placeholder={t("reviewSlider.reviewNotesPlaceholder")}
                     required
                   />
@@ -1991,6 +2005,7 @@ const EvaluationCheckPage = () => {
                     variant="outlined"
                     onClick={handleCloseSlider}
                     disabled={processingAction}
+                    className="text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700"
                   >
                     {t("buttons.cancel")}
                   </Button>
@@ -2006,6 +2021,7 @@ const EvaluationCheckPage = () => {
                     }
                     onClick={handleRejectSubmission}
                     disabled={processingAction}
+                    className="bg-red-600 hover:bg-red-700"
                   >
                     {t("buttons.reject")}
                   </Button>
@@ -2021,6 +2037,7 @@ const EvaluationCheckPage = () => {
                     }
                     onClick={handleApproveSubmission}
                     disabled={processingAction}
+                    className="bg-emerald-600 hover:bg-emerald-700"
                   >
                     {t("buttons.approve")}
                   </Button>
@@ -2151,10 +2168,10 @@ const ReviewButton = ({
     <button
       onClick={() => onReview(submission)}
       disabled={isDisabled}
-      className={`flex items-center justify-center px-3 py-1 rounded-md text-sm ${
+      className={`flex items-center justify-center px-3 py-1 rounded-md text-sm transition-colors ${
         isDisabled
-          ? "bg-gray-100 text-gray-400 cursor-not-allowed"
-          : "bg-blue-50 text-blue-600 hover:bg-blue-100"
+          ? "bg-gray-100 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed"
+          : "bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-100 dark:hover:bg-emerald-900/50 border border-emerald-200 dark:border-emerald-700"
       }`}
       title={
         submission.status === "completed"

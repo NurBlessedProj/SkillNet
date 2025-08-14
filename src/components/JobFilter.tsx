@@ -3,7 +3,7 @@
 import React, { Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import Select from "react-select";
-import { Search, SlidersHorizontal, X } from "lucide-react";
+import { Search, SlidersHorizontal, X, Filter, Check } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 export interface JobFilterOptions {
@@ -87,21 +87,128 @@ const JobFilter: React.FC<FilterProps> = ({
   const selectStyles = {
     control: (base: any) => ({
       ...base,
-      minHeight: "42px",
-      borderRadius: "0.25rem",
+      minHeight: "44px",
+      borderRadius: "0.5rem",
       borderColor: "#e5e7eb",
+      backgroundColor: "white",
+      boxShadow: "none",
       "&:hover": {
-        borderColor: "#3b82f6",
+        borderColor: "#10b981",
+      },
+      "&:focus-within": {
+        borderColor: "#10b981",
+        boxShadow: "0 0 0 1px #10b981",
       },
     }),
     option: (base: any, state: any) => ({
       ...base,
       backgroundColor: state.isSelected
-        ? "#3b82f6"
+        ? "#10b981"
         : state.isFocused
-        ? "#bfdbfe"
+        ? "#d1fae5"
         : "white",
       color: state.isSelected ? "white" : "#374151",
+      "&:hover": {
+        backgroundColor: state.isSelected ? "#10b981" : "#d1fae5",
+      },
+    }),
+    menu: (base: any) => ({
+      ...base,
+      backgroundColor: "white",
+      border: "1px solid #e5e7eb",
+      borderRadius: "0.5rem",
+      boxShadow:
+        "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+    }),
+    singleValue: (base: any) => ({
+      ...base,
+      color: "#374151",
+    }),
+    placeholder: (base: any) => ({
+      ...base,
+      color: "#9ca3af",
+    }),
+    multiValue: (base: any) => ({
+      ...base,
+      backgroundColor: "#d1fae5",
+      borderRadius: "0.375rem",
+    }),
+    multiValueLabel: (base: any) => ({
+      ...base,
+      color: "#065f46",
+      fontWeight: "500",
+    }),
+    multiValueRemove: (base: any) => ({
+      ...base,
+      color: "#065f46",
+      "&:hover": {
+        backgroundColor: "#a7f3d0",
+        color: "#064e3b",
+      },
+    }),
+  };
+
+  const darkSelectStyles = {
+    control: (base: any) => ({
+      ...base,
+      minHeight: "44px",
+      borderRadius: "0.5rem",
+      borderColor: "#4b5563",
+      backgroundColor: "#374151",
+      boxShadow: "none",
+      "&:hover": {
+        borderColor: "#10b981",
+      },
+      "&:focus-within": {
+        borderColor: "#10b981",
+        boxShadow: "0 0 0 1px #10b981",
+      },
+    }),
+    option: (base: any, state: any) => ({
+      ...base,
+      backgroundColor: state.isSelected
+        ? "#10b981"
+        : state.isFocused
+        ? "#374151"
+        : "#1f2937",
+      color: state.isSelected ? "white" : "#d1d5db",
+      "&:hover": {
+        backgroundColor: state.isSelected ? "#10b981" : "#374151",
+      },
+    }),
+    menu: (base: any) => ({
+      ...base,
+      backgroundColor: "#1f2937",
+      border: "1px solid #4b5563",
+      borderRadius: "0.5rem",
+      boxShadow:
+        "0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2)",
+    }),
+    singleValue: (base: any) => ({
+      ...base,
+      color: "#d1d5db",
+    }),
+    placeholder: (base: any) => ({
+      ...base,
+      color: "#9ca3af",
+    }),
+    multiValue: (base: any) => ({
+      ...base,
+      backgroundColor: "#065f46",
+      borderRadius: "0.375rem",
+    }),
+    multiValueLabel: (base: any) => ({
+      ...base,
+      color: "#d1fae5",
+      fontWeight: "500",
+    }),
+    multiValueRemove: (base: any) => ({
+      ...base,
+      color: "#d1fae5",
+      "&:hover": {
+        backgroundColor: "#047857",
+        color: "#ecfdf5",
+      },
     }),
   };
 
@@ -117,230 +224,220 @@ const JobFilter: React.FC<FilterProps> = ({
 
   return (
     <div>
-      {/* Search and Filter Button */}
-      <div className="flex flex-col sm:flex-row gap-3">
-        <div className="flex-1">
-          <div className="relative rounded-md shadow-sm">
-            <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-              <Search className="h-5 w-5 text-gray-400" />
-            </div>
-            <input
-              type="text"
-              value={filters.searchTerm}
-              onChange={(e) =>
-                onFilterChange({ ...filters, searchTerm: e.target.value })
-              }
-              placeholder={t("JobFilter.searchPlaceholder")}
-              className="block w-full rounded-md border border-gray-200 py-2.5 pl-10 pr-3 text-gray-900 placeholder:text-gray-500 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 sm:text-sm"
-            />
-          </div>
-        </div>
-        <button
-          onClick={() => setIsOpen(true)}
-          className="inline-flex items-center justify-center px-4 py-2.5 border border-gray-200 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200"
-        >
-          <SlidersHorizontal className="h-5 w-5 mr-2" />
-          {t("JobFilter.filters")}
-        </button>
-      </div>
-
-      {/* Filter Slide-out Panel */}
+      {/* Filter Modal */}
       <Transition.Root show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-50" onClose={setIsOpen}>
           <Transition.Child
             as={Fragment}
-            enter="ease-in-out duration-500"
+            enter="ease-out duration-300"
             enterFrom="opacity-0"
             enterTo="opacity-100"
-            leave="ease-in-out duration-500"
+            leave="ease-in duration-200"
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 bg-black bg-opacity-75 transition-opacity" />
+            <div className="fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity" />
           </Transition.Child>
 
-          <div className="fixed inset-0 overflow-hidden">
-            <div className="absolute inset-0 overflow-hidden">
-              <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
-                <Transition.Child
-                  as={Fragment}
-                  enter="transform transition ease-in-out duration-500"
-                  enterFrom="translate-x-full"
-                  enterTo="translate-x-0"
-                  leave="transform transition ease-in-out duration-500"
-                  leaveFrom="translate-x-0"
-                  leaveTo="translate-x-full"
-                >
-                  <Dialog.Panel className="pointer-events-auto w-screen max-w-md">
-                    <div className="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
-                      <div className="flex-1 overflow-y-auto px-6 py-6">
-                        <div className="flex items-start justify-between">
-                          <Dialog.Title className="text-lg font-medium text-gray-900">
+          <div className="fixed inset-0 overflow-y-auto">
+            <div className="flex min-h-full items-center justify-center p-4">
+              <Transition.Child
+                as={Fragment}
+                enter="ease-out duration-300"
+                enterFrom="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                enterTo="opacity-100 translate-y-0 sm:scale-100"
+                leave="ease-in duration-200"
+                leaveFrom="opacity-100 translate-y-0 sm:scale-100"
+                leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+              >
+                <Dialog.Panel className="relative w-full max-w-2xl transform overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-xl transition-all">
+                  {/* Header */}
+                  <div className="bg-gradient-to-r from-emerald-500 to-emerald-600 px-6 py-4">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-3">
+                        <div className="p-2 bg-white/20 backdrop-blur-sm rounded-lg">
+                          <Filter className="h-5 w-5 text-white" />
+                        </div>
+                        <div>
+                          <Dialog.Title className="text-lg font-semibold text-white">
                             {t("JobFilter.filterJobs")}
                           </Dialog.Title>
-                          <div className="ml-3 flex h-7 items-center">
-                            <button
-                              type="button"
-                              className="rounded-md bg-white text-gray-400 hover:text-gray-500"
-                              onClick={() => setIsOpen(false)}
-                            >
-                              <span className="sr-only">
-                                {t("JobFilter.closePanel")}
-                              </span>
-                              <X className="h-6 w-6" aria-hidden="true" />
-                            </button>
-                          </div>
-                        </div>
-
-                        <div className="mt-8 space-y-6">
-                          {/* Job Type Filter */}
-                          <div className="space-y-2">
-                            <label className="text-sm font-medium text-gray-700">
-                              {t("JobFilter.jobType")}
-                            </label>
-                            <Select
-                              options={jobTypeOptions}
-                              value={jobTypeOptions.find(
-                                (option) => option.value === tempFilters.jobType
-                              )}
-                              onChange={(selectedOption) =>
-                                setTempFilters({
-                                  ...tempFilters,
-                                  jobType: selectedOption?.value || "",
-                                })
-                              }
-                              styles={selectStyles}
-                              isClearable
-                            />
-                          </div>
-
-                          {/* Status Filter */}
-                          <div className="space-y-2">
-                            <label className="text-sm font-medium text-gray-700">
-                              {t("JobFilter.status")}
-                            </label>
-                            <Select
-                              options={statusOptions}
-                              value={statusOptions.find(
-                                (option) => option.value === tempFilters.status
-                              )}
-                              onChange={(selectedOption) =>
-                                setTempFilters({
-                                  ...tempFilters,
-                                  status: selectedOption?.value || "",
-                                })
-                              }
-                              styles={selectStyles}
-                              isClearable
-                            />
-                          </div>
-
-                          {/* Categories Filter */}
-                          <div className="space-y-2">
-                            <label className="text-sm font-medium text-gray-700">
-                              {t("JobFilter.categoriesLabel")}
-                            </label>
-                            <Select
-                              options={categoryOptions}
-                              isMulti
-                              value={categoryOptions.filter((option) =>
-                                tempFilters.categories.includes(option.value)
-                              )}
-                              onChange={(selectedOptions) =>
-                                setTempFilters({
-                                  ...tempFilters,
-                                  categories: selectedOptions.map(
-                                    (option) => option.value
-                                  ),
-                                })
-                              }
-                              styles={selectStyles}
-                            />
-                          </div>
-
-                          {/* Salary Range */}
-                          <div className="space-y-2">
-                            <label className="text-sm font-medium text-gray-700">
-                              {t("JobFilter.salaryRange")}
-                            </label>
-                            <div className="flex items-center space-x-4">
-                              <input
-                                type="number"
-                                value={tempFilters.salaryRange.min}
-                                onChange={(e) =>
-                                  setTempFilters({
-                                    ...tempFilters,
-                                    salaryRange: {
-                                      ...tempFilters.salaryRange,
-                                      min: Number(e.target.value),
-                                    },
-                                  })
-                                }
-                                className="w-full px-4 py-2 border rounded-md focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
-                                placeholder={t("JobFilter.min")}
-                              />
-                              <span className="text-gray-500">
-                                {t("JobFilter.to")}
-                              </span>
-                              <input
-                                type="number"
-                                value={tempFilters.salaryRange.max}
-                                onChange={(e) =>
-                                  setTempFilters({
-                                    ...tempFilters,
-                                    salaryRange: {
-                                      ...tempFilters.salaryRange,
-                                      max: Number(e.target.value),
-                                    },
-                                  })
-                                }
-                                className="w-full px-4 py-2 border rounded-md focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
-                                placeholder={t("JobFilter.max")}
-                              />
-                            </div>
-                          </div>
-
-                          {/* Capacity Needed */}
-                          <div className="space-y-2">
-                            <label className="text-sm font-medium text-gray-700">
-                              {t("JobFilter.minimumPositionsNeeded")}
-                            </label>
-                            <input
-                              type="number"
-                              value={tempFilters.capacityNeeded}
-                              onChange={(e) =>
-                                setTempFilters({
-                                  ...tempFilters,
-                                  capacityNeeded: Number(e.target.value),
-                                })
-                              }
-                              className="w-full px-4 py-2 border rounded-md focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
-                              placeholder={t("JobFilter.minimumCapacity")}
-                            />
-                          </div>
+                          <p className="text-emerald-100 text-sm">
+                            Refine your job search with advanced filters
+                          </p>
                         </div>
                       </div>
+                      <button
+                        onClick={() => setIsOpen(false)}
+                        className="rounded-lg p-2 text-white/80 hover:text-white hover:bg-white/20 transition-colors"
+                      >
+                        <X className="h-5 w-5" />
+                      </button>
+                    </div>
+                  </div>
 
-                      <div className="border-t border-gray-200 px-6 py-4 space-x-3">
-                        <button
-                          type="button"
-                          className="rounded-md bg-blue-600 px-4 py-2 text-sm text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
-                          onClick={applyFilters}
-                        >
-                          {t("JobFilter.applyFilters")}
-                        </button>
-                        <button
-                          type="button"
-                          className="rounded-md bg-white px-4 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
-                          onClick={resetFilters}
-                        >
-                          {t("JobFilter.reset")}
-                        </button>
+                  {/* Content */}
+                  <div className="px-6 py-6 space-y-6">
+                    {/* Job Type Filter */}
+                    <div className="space-y-2">
+                      <label className="text-sm font-medium text-gray-700 dark:text-gray-200">
+                        {t("JobFilter.jobType")}
+                      </label>
+                      <Select
+                        options={jobTypeOptions}
+                        value={jobTypeOptions.find(
+                          (option) => option.value === tempFilters.jobType
+                        )}
+                        onChange={(selectedOption) =>
+                          setTempFilters({
+                            ...tempFilters,
+                            jobType: selectedOption?.value || "",
+                          })
+                        }
+                        styles={selectStyles}
+                        isClearable
+                        placeholder={t("JobFilter.selectJobType")}
+                      />
+                    </div>
+
+                    {/* Status Filter */}
+                    <div className="space-y-2">
+                      <label className="text-sm font-medium text-gray-700 dark:text-gray-200">
+                        {t("JobFilter.status")}
+                      </label>
+                      <Select
+                        options={statusOptions}
+                        value={statusOptions.find(
+                          (option) => option.value === tempFilters.status
+                        )}
+                        onChange={(selectedOption) =>
+                          setTempFilters({
+                            ...tempFilters,
+                            status: selectedOption?.value || "",
+                          })
+                        }
+                        styles={selectStyles}
+                        isClearable
+                        placeholder={t("JobFilter.selectStatus")}
+                      />
+                    </div>
+
+                    {/* Categories Filter */}
+                    <div className="space-y-2">
+                      <label className="text-sm font-medium text-gray-700 dark:text-gray-200">
+                        {t("JobFilter.categoriesLabel")}
+                      </label>
+                      <Select
+                        options={categoryOptions}
+                        isMulti
+                        value={categoryOptions.filter((option) =>
+                          tempFilters.categories.includes(option.value)
+                        )}
+                        onChange={(selectedOptions) =>
+                          setTempFilters({
+                            ...tempFilters,
+                            categories: selectedOptions.map(
+                              (option) => option.value
+                            ),
+                          })
+                        }
+                        styles={selectStyles}
+                        placeholder={t("JobFilter.selectCategories")}
+                      />
+                    </div>
+
+                    {/* Salary Range */}
+                    <div className="space-y-2">
+                      <label className="text-sm font-medium text-gray-700 dark:text-gray-200">
+                        {t("JobFilter.salaryRange")}
+                      </label>
+                      <div className="grid grid-cols-2 gap-3">
+                        <div>
+                          <input
+                            type="number"
+                            value={tempFilters.salaryRange.min}
+                            onChange={(e) =>
+                              setTempFilters({
+                                ...tempFilters,
+                                salaryRange: {
+                                  ...tempFilters.salaryRange,
+                                  min: Number(e.target.value),
+                                },
+                              })
+                            }
+                            className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
+                            placeholder={t("JobFilter.min")}
+                          />
+                        </div>
+                        <div>
+                          <input
+                            type="number"
+                            value={tempFilters.salaryRange.max}
+                            onChange={(e) =>
+                              setTempFilters({
+                                ...tempFilters,
+                                salaryRange: {
+                                  ...tempFilters.salaryRange,
+                                  max: Number(e.target.value),
+                                },
+                              })
+                            }
+                            className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
+                            placeholder={t("JobFilter.max")}
+                          />
+                        </div>
                       </div>
                     </div>
-                  </Dialog.Panel>
-                </Transition.Child>
-              </div>
+
+                    {/* Capacity Needed */}
+                    <div className="space-y-2">
+                      <label className="text-sm font-medium text-gray-700 dark:text-gray-200">
+                        {t("JobFilter.minimumPositionsNeeded")}
+                      </label>
+                      <input
+                        type="number"
+                        value={tempFilters.capacityNeeded}
+                        onChange={(e) =>
+                          setTempFilters({
+                            ...tempFilters,
+                            capacityNeeded: Number(e.target.value),
+                          })
+                        }
+                        className="w-full px-4 py-2.5 border border-gray-200 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
+                        placeholder={t("JobFilter.minimumCapacity")}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Footer */}
+                  <div className="bg-gray-50 dark:bg-gray-700 px-6 py-4 flex items-center justify-between">
+                    <button
+                      type="button"
+                      onClick={resetFilters}
+                      className="px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-600 border border-gray-200 dark:border-gray-500 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-500 transition-colors"
+                    >
+                      {t("JobFilter.reset")}
+                    </button>
+                    <div className="flex gap-3">
+                      <button
+                        type="button"
+                        onClick={() => setIsOpen(false)}
+                        className="px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-600 border border-gray-200 dark:border-gray-500 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-500 transition-colors"
+                      >
+                        {t("JobFilter.cancel")}
+                      </button>
+                      <button
+                        type="button"
+                        onClick={applyFilters}
+                        className="px-4 py-2 text-sm font-medium text-white bg-emerald-600 hover:bg-emerald-700 rounded-lg transition-colors flex items-center gap-2"
+                      >
+                        <Check className="h-4 w-4" />
+                        {t("JobFilter.applyFilters")}
+                      </button>
+                    </div>
+                  </div>
+                </Dialog.Panel>
+              </Transition.Child>
             </div>
           </div>
         </Dialog>

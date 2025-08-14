@@ -7,15 +7,15 @@ import { GridColDef } from "@mui/x-data-grid";
 import { GetJobs, JobPosting } from "@/app/apis/job/getJobs";
 import { supabase } from "@/lib/supabase";
 import CryptoJS from "crypto-js";
-import { Loader2 } from "lucide-react";
+import { Loader2, Search, Filter, Eye, MoreHorizontal } from "lucide-react";
 import JobFilter, {
   initialJobFilterState,
   JobFilterOptions,
 } from "@/components/JobFilter";
 import DeleteModalJob from "./modalDeleteJob";
 import { useTranslations } from "next-intl";
-import { useRouter } from "next/navigation"; // Import router
-import { useLocale } from "next-intl"; // Import useLocale
+import { useRouter } from "next/navigation";
+import { useLocale } from "next-intl";
 
 interface UserRole {
   role: string;
@@ -30,7 +30,7 @@ interface ApplicationStats {
 }
 
 const JobTable: FC = () => {
-  const t = useTranslations(); // Initialize the translation hook
+  const t = useTranslations();
   const { job, error, isLoading } = GetJobs();
   const [userRole, setUserRole] = useState<UserRole>({ role: "", email: null });
   const [filters, setFilters] = useState<JobFilterOptions>(
@@ -50,6 +50,11 @@ const JobTable: FC = () => {
       width: 120,
       minWidth: 100,
       flex: 1,
+      renderCell: (params) => (
+        <div className="font-medium text-gray-900 dark:text-white">
+          {params.row.role}
+        </div>
+      ),
     },
     {
       field: "created_at",
@@ -58,8 +63,8 @@ const JobTable: FC = () => {
       minWidth: 100,
       flex: 1,
       renderCell: (params) => (
-        <div className="flex space-x-2">
-          {moment(params.row.created_at).format("MMMM D, YYYY")}
+        <div className="text-sm text-gray-600 dark:text-gray-300">
+          {moment(params.row.created_at).format("MMM D, YYYY")}
         </div>
       ),
     },
@@ -70,8 +75,8 @@ const JobTable: FC = () => {
       minWidth: 100,
       flex: 1,
       renderCell: (params) => (
-        <div className="flex space-x-2">
-          {moment(params.row.end_date).format("MMMM D, YYYY")}
+        <div className="text-sm text-gray-600 dark:text-gray-300">
+          {moment(params.row.end_date).format("MMM D, YYYY")}
         </div>
       ),
     },
@@ -83,9 +88,9 @@ const JobTable: FC = () => {
       flex: 1,
       renderCell: (params) => (
         <div className="flex space-x-2">
-          <button className="px-4 rounded-full h-7 border border-green-500 text-green-500 mt-4">
-            <p className="-mt-3">{params.row.job_type}</p>
-          </button>
+          <span className="px-3 py-1 rounded-full text-xs font-medium bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-700">
+            {params.row.job_type}
+          </span>
         </div>
       ),
     },
@@ -96,18 +101,27 @@ const JobTable: FC = () => {
       minWidth: 100,
       flex: 1,
       renderCell: (params) => {
-        // Determine if job is active or inactive
         const isActive = params.row.status?.toLowerCase() === "active";
-        const borderColor = isActive ? "border-green-500" : "border-red-500";
-        const textColor = isActive ? "text-green-500" : "text-red-500";
+        const isLive = params.row.status?.toLowerCase() === "live";
+
+        let badgeClass =
+          "bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-600";
+
+        if (isActive || isLive) {
+          badgeClass =
+            "bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-700";
+        } else if (params.row.status?.toLowerCase() === "closed") {
+          badgeClass =
+            "bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 border border-red-200 dark:border-red-700";
+        }
 
         return (
           <div className="flex space-x-2">
-            <button
-              className={`px-4 rounded-full h-7 border ${borderColor} ${textColor} mt-4`}
+            <span
+              className={`px-3 py-1 rounded-full text-xs font-medium ${badgeClass}`}
             >
-              <p className="-mt-3">{params.row.status}</p>
-            </button>
+              {params.row.status}
+            </span>
           </div>
         );
       },
@@ -127,15 +141,15 @@ const JobTable: FC = () => {
         };
         return (
           <div className="flex flex-col">
-            <div className="text-sm font-medium">
+            <div className="text-sm font-medium text-gray-900 dark:text-white">
               {stats.total} {t("JobTable.applications.total")}
             </div>
-            <div className="text-xs text-gray-500">
-              <span className="text-yellow-600">
+            <div className="text-xs text-gray-500 dark:text-gray-400">
+              <span className="text-yellow-600 dark:text-yellow-400">
                 {stats.pending} {t("JobTable.applications.pending")}
               </span>{" "}
               •
-              <span className="text-green-600 ml-1">
+              <span className="text-emerald-600 dark:text-emerald-400 ml-1">
                 {stats.accepted} {t("JobTable.applications.accepted")}
               </span>
             </div>
@@ -150,14 +164,16 @@ const JobTable: FC = () => {
       minWidth: 100,
       flex: 1,
       renderCell: (params) => (
-        <div className="flex items-center">
-          <div className="mr-2">{params.row.capacity}</div>
-          <div className="w-full max-w-[60px] bg-gray-200 rounded-full h-2">
+        <div className="flex items-center gap-2">
+          <div className="text-sm font-medium text-gray-900 dark:text-white">
+            {params.row.capacity}
+          </div>
+          <div className="w-full max-w-[60px] bg-gray-200 dark:bg-gray-700 rounded-full h-2">
             <div
-              className={`h-2 rounded-full ${
+              className={`h-2 rounded-full transition-all duration-300 ${
                 params.row.capacity >= params.row.capacity_needed
                   ? "bg-red-500"
-                  : "bg-blue-600"
+                  : "bg-emerald-600"
               }`}
               style={{
                 width: `${Math.min(
@@ -176,6 +192,11 @@ const JobTable: FC = () => {
       width: 120,
       minWidth: 100,
       flex: 1,
+      renderCell: (params) => (
+        <div className="text-sm text-gray-600 dark:text-gray-300">
+          {params.row.capacity_needed}
+        </div>
+      ),
     },
     {
       field: "actions",
@@ -191,6 +212,7 @@ const JobTable: FC = () => {
       ),
     },
   ];
+
   useEffect(() => {
     const getUserRole = async () => {
       try {
@@ -220,10 +242,7 @@ const JobTable: FC = () => {
       if (!job || job.length === 0) return;
 
       try {
-        // Get all job IDs
         const jobIds = job.map((j) => j.id);
-
-        // Fetch applications for these jobs
         const { data: applications, error } = await supabase
           .from("applied")
           .select("id_job_postings, status")
@@ -231,18 +250,14 @@ const JobTable: FC = () => {
 
         if (error) throw error;
 
-        // Process the data to get statistics by job ID
         const stats: Record<string, ApplicationStats> = {};
-
-        // Initialize stats for all jobs
         jobIds.forEach((id) => {
           stats[id] = { total: 0, pending: 0, accepted: 0, rejected: 0 };
         });
 
-        // Count applications by status
         applications?.forEach((app) => {
           const jobId = app.id_job_postings.toString();
-          const status = app.status || "pending"; // Default to pending if status is null
+          const status = app.status || "pending";
 
           if (!stats[jobId]) {
             stats[jobId] = { total: 0, pending: 0, accepted: 0, rejected: 0 };
@@ -272,7 +287,6 @@ const JobTable: FC = () => {
     if (job) {
       let filtered = [...job];
 
-      // Apply search filter
       if (filters.searchTerm) {
         const searchLower = filters.searchTerm.toLowerCase();
         filtered = filtered.filter(
@@ -286,17 +300,14 @@ const JobTable: FC = () => {
         );
       }
 
-      // Apply job type filter
       if (filters.jobType) {
         filtered = filtered.filter((item) => item.job_type === filters.jobType);
       }
 
-      // Apply status filter
       if (filters.status) {
         filtered = filtered.filter((item) => item.status === filters.status);
       }
 
-      // Apply categories filter
       if (filters.categories.length > 0) {
         filtered = filtered.filter((item) =>
           item.categories.some((category: string) =>
@@ -305,14 +316,12 @@ const JobTable: FC = () => {
         );
       }
 
-      // Apply capacity needed filter
       if (filters.capacityNeeded > 0) {
         filtered = filtered.filter(
           (item) => item.capacity_needed >= filters.capacityNeeded
         );
       }
 
-      // Transform the filtered data and add user role information
       const transformedRows = filtered.map((item: JobPosting) => ({
         ...item,
         id: item.id,
@@ -331,21 +340,59 @@ const JobTable: FC = () => {
 
   if (error) {
     return (
-      <div className="p-4 text-red-600 bg-red-100 rounded">
+      <div className="p-6 text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-900/20 rounded-lg border border-red-200 dark:border-red-800">
         {t("JobTable.errors.loadingJobs", { error: error.message })}
       </div>
     );
   }
 
   return (
-    <div className="" style={{ width: "100%" }}>
+    <div className="space-y-6">
+      {/* Filter Section */}
+      <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
+        <div className="flex items-center gap-3">
+          <button
+            onClick={() => setIsFilterOpen(!isFilterOpen)}
+            className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors"
+          >
+            <Filter className="h-4 w-4 text-gray-600 dark:text-gray-300" />
+            <span className="text-sm font-medium text-gray-700 dark:text-gray-200">
+              {t("JobTable.filters.title")}
+            </span>
+          </button>
+          {filters.searchTerm && (
+            <div className="text-sm text-gray-500 dark:text-gray-400">
+              {filteredJobs.length} {t("JobTable.filters.results")}
+            </div>
+          )}
+        </div>
+
+        <div className="flex items-center gap-2">
+          <div className="relative">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+            <input
+              type="text"
+              placeholder={t("JobTable.filters.searchPlaceholder")}
+              value={filters.searchTerm}
+              onChange={(e) =>
+                setFilters({ ...filters, searchTerm: e.target.value })
+              }
+              className="pl-10 pr-4 py-2 border border-gray-200 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Filter Panel */}
       <JobFilter
         onFilterChange={setFilters}
         filters={filters}
         isOpen={isFilterOpen}
         setIsOpen={setIsFilterOpen}
       />
-      <div className="mt-4">
+
+      {/* Table */}
+      <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden">
         <DataGridDemo
           rows={filteredJobs}
           columns={columns}
@@ -369,16 +416,13 @@ interface ViewButtonProps {
 const ViewButton: FC<ViewButtonProps> = ({ params }) => {
   const t = useTranslations();
   const [isLoading, setIsLoading] = useState(false);
-  const router = useRouter(); // Use Next.js router
-  const locale = useLocale(); // Get current locale
+  const router = useRouter();
+  const locale = useLocale();
 
   const handleView = async () => {
     setIsLoading(true);
     try {
-      // Simulate a slight delay to show loading state
       await new Promise((resolve) => setTimeout(resolve, 300));
-
-      // Use client-side navigation with the current locale
       router.push(`/${locale}/jobs/socialMediaAssistance?id=${params.row.id}`);
     } catch (error) {
       console.error("Error navigating to details:", error);
@@ -389,14 +433,17 @@ const ViewButton: FC<ViewButtonProps> = ({ params }) => {
 
   return (
     <button
-      className="px-2 mt-2 h-7 bg-white border-green-500 border text-green-500 text-sm flex items-center justify-center gap-2 disabled:opacity-50"
+      className="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white text-sm rounded-lg flex items-center justify-center gap-2 disabled:opacity-50 transition-colors"
       onClick={handleView}
       disabled={isLoading}
     >
       {isLoading ? (
         <Loader2 className="h-4 w-4 animate-spin" />
       ) : (
-        <p className="-mt-0.5">{t("JobTable.actions.view")}</p>
+        <>
+          <Eye className="h-4 w-4" />
+          <span>{t("JobTable.actions.view")}</span>
+        </>
       )}
     </button>
   );
@@ -410,7 +457,6 @@ interface MoreIconProps {
 
 const MoreIcon: FC<MoreIconProps> = ({ id, userRole }) => {
   const t = useTranslations();
-  // Only show delete option for s_admin or if admin owns the job
   const canDelete = userRole !== "user";
 
   if (!canDelete) {

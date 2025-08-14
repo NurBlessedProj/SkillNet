@@ -130,7 +130,7 @@ const JobPostingForm = ({ onClose }: { onClose: () => void }) => {
 
   const [status, setStatus] = useState("Active");
   const [active, setActive] = useState(true);
-  const router = useRouter()
+  const router = useRouter();
 
   // Create translated options
   const categories: Option[] = [
@@ -687,11 +687,10 @@ const JobPostingForm = ({ onClose }: { onClose: () => void }) => {
               required
             />
             <span className="text-sm text-gray-500 mt-1">
-            {t("JobPosting.positionsSummary", {
-  filled: totalPositions,
-  needed: positionsAvailable,
-})}
-
+              {t("JobPosting.positionsSummary", {
+                filled: totalPositions,
+                needed: positionsAvailable,
+              })}
             </span>
           </div>
         </div>
@@ -1019,7 +1018,7 @@ const Slider = ({
   isOpen: boolean;
   onClose: () => void;
 }) => {
-  const t  = useTranslations();
+  const t = useTranslations();
   const [isVisible, setIsVisible] = useState(false);
   const [shouldRender, setShouldRender] = useState(false);
 
@@ -1100,14 +1099,14 @@ const Slider = ({
 };
 
 export default function JobPostingPage() {
-  const t  = useTranslations(); // Initialize the translation hook
+  const t = useTranslations(); // Initialize the translation hook
   const [isSliderOpen, setIsSliderOpen] = useState(false);
 
   return (
     <div>
       <button
         onClick={() => setIsSliderOpen(true)}
-        className="flex items-center gap-2 px-4 py-2.5 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+        className="flex items-center gap-2 px-4 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg font-medium transition-all duration-200 shadow-sm hover:shadow-md"
       >
         <Plus className="w-5 h-5" />
         {t("JobPosting.actions.newJobPosting")}
